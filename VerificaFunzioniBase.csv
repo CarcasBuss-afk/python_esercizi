@@ -1,0 +1,17 @@
+Ti consigliamo di non modificare la griglia in formato di foglio di lavoro,,,,,,
+v1.0-s,,,,,,
+Correttezza ed Esecuzione,,,,,,
+,,,,,,
+,40.0,32.0,24.0,16.0,8.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In bianco
+,"Tutti o quasi tutti gli esercizi (18-20) eseguono correttamente e producono l'output atteso. Nessun errore di esecuzione.","La maggior parte degli esercizi (14-17) esegue correttamente. Output prevalentemente corretto con pochi errori.","Almeno la metà degli esercizi (10-13) esegue correttamente. Output parzialmente corretto.","Alcuni esercizi (6-9) eseguono correttamente. Molti errori di esecuzione.","Pochi esercizi (0-5) eseguono correttamente. Il codice non produce gli output richiesti.",
+Completezza,,,,,,
+,,,,,,
+,30.0,24.0,18.0,12.0,6.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In bianco
+,"Tutti i 20 esercizi sono stati tentati, tutti i campi sono stati compilati con impegno.","Almeno 16-19 esercizi completati. La maggior parte dei campi compilati correttamente.","Almeno 12-15 esercizi completati. Metà del lavoro svolto con impegno.","Almeno 8-11 esercizi completati. Lavoro parziale e incompleto.","Meno di 8 esercizi completati. Lavoro molto incompleto.",
+Qualità del Codice e Sintassi,,,,,,
+,,,,,,
+,30.0,24.0,18.0,12.0,6.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In bianco
+,"Codice senza errori di sintassi, variabili con nomi appropriati, ottima leggibilità e indentazione corretta.","Pochi errori di sintassi minori, codice generalmente pulito e ben organizzato. Buona leggibilità.","Alcuni errori di sintassi ma approccio corretto. Codice comprensibile nonostante qualche imprecisione.","Molti errori di sintassi, codice poco curato. Scarsa attenzione ai dettagli.","Errori di sintassi gravi in quasi tutti gli esercizi. Codice confuso e poco leggibile.",

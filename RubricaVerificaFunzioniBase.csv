@@ -1,0 +1,32 @@
+Ti consigliamo di non modificare la griglia in formato di foglio di lavoro,,,,,,
+v1.0-s,,,,,,
+Correttezza ed Esecuzione (es 1-10),,,,,,
+,,,,,,
+,20.0,16.0,12.0,8.0,4.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In bianco
+,"Tutti o quasi tutti gli esercizi (9-10) eseguono correttamente e producono l'output atteso.","La maggior parte degli esercizi (7-8) esegue correttamente con pochi errori.","Almeno la metà degli esercizi (5-6) esegue correttamente.","Alcuni esercizi (3-4) eseguono correttamente.","Pochi esercizi (0-2) eseguono correttamente.",
+Completezza (es 1-10),,,,,,
+,,,,,,
+,15.0,12.0,9.0,6.0,3.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In Bianco
+,"Tutti i 10 esercizi sono stati tentati, tutti i campi compilati con impegno.","Almeno 8-9 esercizi completati con attenzione.","Almeno 6-7 esercizi completati.","Almeno 4-5 esercizi completati.","Meno di 4 esercizi completati.",
+Qualità del Codice e Sintassi (es 1-10),,,,,,
+,,,,,,
+,15.0,12.0,9.0,6.0,3.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In Bianco
+,"Codice senza errori di sintassi, variabili appropriate, ottima leggibilità e indentazione.","Pochi errori di sintassi minori, codice generalmente pulito e ben organizzato.","Alcuni errori di sintassi ma approccio corretto. Codice comprensibile.","Molti errori di sintassi, codice poco curato.","Errori di sintassi gravi, codice confuso e poco leggibile.",
+Correttezza ed Esecuzione (es 11-20),,,,,,
+,,,,,,
+,20.0,16.0,12.0,8.0,4.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In bianco
+,"Tutti o quasi tutti gli esercizi (9-10) eseguono correttamente e producono l'output atteso.","La maggior parte degli esercizi (7-8) esegue correttamente con pochi errori.","Almeno la metà degli esercizi (5-6) esegue correttamente.","Alcuni esercizi (3-4) eseguono correttamente.","Pochi esercizi (0-2) eseguono correttamente.",
+Completezza (es 11-20),,,,,,
+,,,,,,
+,15.0,12.0,9.0,6.0,3.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In Bianco
+,"Tutti i 10 esercizi sono stati tentati, tutti i campi compilati con impegno.","Almeno 8-9 esercizi completati con attenzione.","Almeno 6-7 esercizi completati.","Almeno 4-5 esercizi completati.","Meno di 4 esercizi completati.",
+Qualità del Codice e Sintassi (es 11-20),,,,,,
+,,,,,,
+,15.0,12.0,9.0,6.0,3.0,0.0
+,Ottimo,Buono,Sufficiente,Base,Insufficiente,In Bianco
+,"Codice senza errori di sintassi, variabili appropriate, ottima leggibilità e indentazione.","Pochi errori di sintassi minori, codice generalmente pulito e ben organizzato.","Alcuni errori di sintassi ma approccio corretto. Codice comprensibile.","Molti errori di sintassi, codice poco curato.","Errori di sintassi gravi, codice confuso e poco leggibile.",
