@@ -1,34 +1,28 @@
 # COMPLETA IL CODICE DOVE TROVI ________ !
 
-""" SCOPO del programma: verificare se uno username contiene almeno 2 numeri """
+""" SCOPO del programma: contare gli spazi in una descrizione e classificarla come corta o lunga """
 
-# Chiedi all'utente di inserire uno username
-username = input("Inserisci uno username: ")
+# Chiedi all'utente di inserire una descrizione prodotto
+descrizione = input("Inserisci una descrizione prodotto: ")
 
-# Conta quanti numeri contiene lo username
-# Dobbiamo contare '0', '1', '2', ... '9' e sommarli
-numeri_totali = 0
-numeri_totali += username.______("0")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
-numeri_totali += username.count("_")
+# Conta quanti spazi ci sono
+numero_spazi = descrizione.______(" ")
 
-# Verifica se ci sono almeno 2 numeri
-__ numeri_totali __ 2:
-    print("Username valido")
+# Stampa quanti spazi ci sono
+print("La descrizione contiene", ____________, "spazi")
+
+# Verifica se la descrizione è lunga (più di 5 spazi)
+__ numero_spazi __ 5:
+    print("Descrizione lunga")
 ____:
-    print("Username non valido - servono almeno 2 numeri")
+    print("Descrizione corta")
 
 """ Output atteso (esempi):
-Inserisci uno username: gamer99
-Username valido
+Inserisci una descrizione prodotto: Smartphone con fotocamera ad alta risoluzione
+La descrizione contiene 5 spazi
+Descrizione corta
 
-Inserisci uno username: player1
-Username non valido - servono almeno 2 numeri
+Inserisci una descrizione prodotto: Questo è un ottimo prodotto di alta qualità
+La descrizione contiene 8 spazi
+Descrizione lunga
 """

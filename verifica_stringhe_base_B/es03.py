@@ -11,3 +11,6 @@ Inserisci la descrizione: Computer portatile
 Prodotto: Notebook, Lunghezza: 8
 Descrizione: Computer portatile, Lunghezza: 18
 """
+
+# Scrivi il codice qui sotto
+
