@@ -20,4 +20,4 @@ def mostra_orari():
 mostra_benvenuto()
 
 # CHIAMA la funzione mostra_orari
-
+mostra_orari()

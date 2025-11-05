@@ -20,14 +20,15 @@ def valida_voto(voto):
 # - Se eta >= 65: applica sconto 30% e stampa "Prezzo scontato: €[prezzo_scontato]"
 # - Altrimenti: stampa "Prezzo pieno: €[prezzo]"
 # Formula sconto: prezzo_scontato = prezzo - (prezzo * percentuale / 100)
-def calcola_sconto_eta(prezzo, eta, ):    
+def calcola_sconto_eta(prezzo, eta):    
     if eta < 18:
-        print("Prezzo scontato €", sconto)
         sconto = prezzo - (prezzo * 20 / 100)
+        print("Prezzo scontato: €", sconto)
     elif eta >= 65:
-        print("Prezzo scontato €", sconto)
         sconto = prezzo - (prezzo * 30 / 100)
-
+        print("Prezzo scontato: €", sconto)
+    else:
+        print("Prezzo pieno: €", prezzo)
 
     
     

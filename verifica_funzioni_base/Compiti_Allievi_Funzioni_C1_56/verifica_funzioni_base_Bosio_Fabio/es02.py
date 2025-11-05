@@ -6,21 +6,21 @@
 
 # DEFINISCI UNA FUNZIONE chiamata 'stampa_separatore' che stampa:
 # "------------------------"
-___ ________________():
+def stampa_separatore():
     print("------------------------")
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'stampa_titolo_corso' che stampa:
 # "CORSO DI PROGRAMMAZIONE PYTHON"
-___ __________________():
+def stampa_titolo_corso():
     print("CORSO DI PROGRAMMAZIONE PYTHON")
 
 
 # CHIAMA stampa_separatore
-________________()
+stampa_separatore()
 
 # CHIAMA stampa_titolo_corso
-__________________()
+stampa_titolo_corso()
 
 # CHIAMA stampa_separatore di nuovo
-________________()
+stampa_separatore()

@@ -28,9 +28,12 @@ Il programma deve:
 
 # DEFINISCI LE FUNZIONI QUI
 
-
-
-
+def calcola_punteggio_totale(livello1, livello2, livello3):
+    livello1 = input("punteggio livello1? ")
+    livello2 = input("punteggio livello2? ")
+    livello3 = input("punteggio livello3? ")
+   
+calcola_punteggio_totale("livello1", "livello2", "livello3" )
 
 
 
