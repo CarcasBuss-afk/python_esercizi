@@ -9,7 +9,7 @@
 # Formula: perimetro = (base + altezza) * 2
 def calcola_perimetro_rettangolo(base, altezza):
     perimetro = (base + altezza) * 2
-    print("Il perimetro è:", perimetro)
+    print(f"Il perimetro è:", {perimetro})
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'calcola_totale_con_iva' che prende 'prezzo' e 'iva'

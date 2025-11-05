@@ -20,9 +20,9 @@ def verifica_login(username, password):
 # - Altrimenti: stampa "I numeri sono uguali"
 def confronta_numeri(a, b):
     if a > b:
-        print(f"{a} è maggiore di {b}")
+        print (f"{a} è maggiore di {b}")
     elif a < b:
-        print(f"{b} è maggiore di {a}")
+        print (f"{a} minore di {b}")
     else:
         print("I numeri sono uguali")
 

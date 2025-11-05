@@ -7,17 +7,17 @@
 # DEFINISCI UNA FUNZIONE chiamata 'calcola_area_quadrato' che prende 'lato'
 # e stampa "L'area del quadrato è: [area]"
 # Formula: area = lato * lato
-def calcola_area_quadrato(area):
+def calcola_area_quadrato(lato):
     area = lato * lato
-    print("L'area del quadrato è:", area)
+    print(f"L'area del quadrato è:", {area})
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'converti_euro_dollari' che prende 'euro'
 # e stampa "€[euro] corrispondono a $[dollari]"
 # Formula: dollari = euro * 1.1
-def converti_euro_dollari (euro):
+def converti_euro_dollari(euro):
     dollari = euro * 1.1
-    print("€",euro, " corrispondono a $", dollari)
+    print(f"€", {euro}, " corrispondono a $", {dollari})
 
 
 # Programma principale

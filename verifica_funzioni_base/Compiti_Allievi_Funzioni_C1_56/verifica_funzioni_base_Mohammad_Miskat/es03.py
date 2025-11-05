@@ -9,30 +9,27 @@
 # "2. Aggiungi al carrello"
 # "3. Esci"
 def mostra_menu():
-    print("1.visualizza prodotti")
-    print("2. aggiungi al carrello")
-    print("3. esci")
+    print("1. Visualizza prodotti")
+    print("2. Aggiungi al carrello")
+    print("3. Esci")
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'mostra_prodotti' che stampa:
 # "Prodotti disponibili: Laptop, Mouse, Tastiera"
 def mostra_prodotti():
-    print("proditti disponibili : laptop,mouse, tastiera")
-
+    print("Prodotti disponibili: Laptop, Mouse, Tastiera")
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'mostra_carrello' che stampa:
 # "Hai aggiunto un prodotto al carrello"
 def mostra_carrello():
-    print ("hai aggiunto un prodotto al carrello")
-
-
+    print("Hai aggiunto un prodotto al carrello")
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'mostra_uscita' che stampa:
 # "Grazie per gli acquisti!"
 def mostra_uscita():
-    print ("grazie per gli acquisti")
+    print("Grazie per gli acquisti!")
 
 
 # Programma principale

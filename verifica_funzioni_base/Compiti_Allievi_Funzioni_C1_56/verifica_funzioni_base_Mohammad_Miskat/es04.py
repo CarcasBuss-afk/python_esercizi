@@ -19,26 +19,30 @@ Il programma deve:
 """
 
 # DEFINISCI TUTTE LE FUNZIONI QUI
+
 def mostra_titolo():
-    print ("=== CINEMA CENTRAL ===")
+    print("=== CINEMA CENTRAL ===")
 
 def mostra_film():
-    print ("Film in programmazione: Matrix, Avatar, Inception")
+    print("Film in programmazione: Matrix, Avatar, Inception")
 
 def mostra_orari():
-    print ("Orari spettacoli: 15:00, 18:00, 21:00")
+    print("Orari spettacoli: 15:00, 18:00, 21:00")
 
 def mostra_contatti():
-    print ("Telefono: 123-456-789")
+    print("Telefono: 123-456-789")
+
+
+
+
 
 
 # SCRIVI IL PROGRAMMA PRINCIPALE QUI
 
-mostra_titolo ()
+mostra_titolo()
+mostra_film()
+mostra_orari()
+mostra_contatti()
 
-mostra_film ()
 
-mostra_orari ()
-
-mostra_contatti ()
 

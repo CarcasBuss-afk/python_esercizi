@@ -1,104 +1,113 @@
 # Correzione Verifica Funzioni Base - Bortolozzo Manuel
 
-Punteggio Totale: 0/100
+Punteggio Totale: 50/100
 
 ---
 
 ## Esercizio 1
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Creare e chiamare funzioni senza parametri (mostra_benvenuto e mostra_orari).
 
 Analisi del codice:
-L'esercizio non e stato completato. Il file contiene solo parti della traccia originale, con tutti gli spazi vuoti (___) lasciati invariati.
-
-Cosa dovevi fare:
-1. Completare le definizioni delle funzioni scrivendo `def` al posto di `___` (righe 9 e 15)
-2. Chiamare le funzioni scrivendo i nomi completi `mostra_benvenuto()` e `mostra_orari()` (righe 20 e 23)
+Esercizio completato perfettamente. Hai definito correttamente entrambe le funzioni e le hai chiamate nel modo giusto. Ottimo lavoro.
 
 ---
 
 ## Esercizio 2
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Creare funzioni e richiamarle multiple volte (stampa_separatore e stampa_titolo_corso).
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
-
-Cosa dovevi fare:
-1. Completare le definizioni delle funzioni con `def` e i nomi corretti
-2. Chiamare le funzioni tre volte nel programma principale
+Esercizio completato perfettamente. Hai definito correttamente le funzioni e le hai chiamate tre volte come richiesto. Il programma funziona correttamente.
 
 ---
 
 ## Esercizio 3
-Punteggio: 0/5
+Punteggio: 4/5
 
 Obiettivo: Menu con funzioni e logica condizionale.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
+Hai completato l'esercizio correttamente e il programma funziona. Hai definito tutte le funzioni e implementato la logica condizionale.
 
-Cosa dovevi fare:
-1. Definire quattro funzioni (mostra_menu, mostra_prodotti, mostra_carrello, mostra_uscita)
-2. Completare le condizioni if/elif/else con gli operatori e valori corretti
-3. Chiamare le funzioni appropriate in ogni blocco condizionale
+Nota:
+Ci sono alcuni piccoli errori di ortografia nell'output:
+- Riga 12: hai scritto "1.visualizza prodotti" (manca lo spazio dopo il punto)
+- Riga 13: hai scritto "2. aggiungi" (minuscolo invece di maiuscolo)
+- Riga 14: hai scritto "3. esci" (minuscolo invece di maiuscolo)
+- Riga 20: hai scritto "proditti" invece di "Prodotti" e tutto in minuscolo
+
+Questi sono errori minori di formattazione che non compromettono la funzionalita, ma e importante prestare attenzione ai dettagli.
 
 ---
 
 ## Esercizio 4
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Riepilogo funzioni senza parametri - programma cinema.
 
 Analisi del codice:
-L'esercizio non e stato svolto. Il file e identico alla traccia.
-
-Cosa dovevi fare:
-Creare quattro funzioni (mostra_titolo, mostra_film, mostra_orari, mostra_contatti) e chiamarle nel programma principale.
+Esercizio completato perfettamente. Hai definito tutte e quattro le funzioni richieste e le hai chiamate correttamente nel programma principale. Il codice e ben strutturato.
 
 ---
 
 ## Esercizio 5
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con un parametro.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
-
-Cosa dovevi fare:
-1. Completare le definizioni delle funzioni con `def` e i parametri corretti
-2. Completare le chiamate alle funzioni passando i parametri richiesti
+Esercizio completato perfettamente. Hai definito correttamente le funzioni con un parametro, implementato i calcoli richiesti e chiamato le funzioni passando i parametri corretti.
 
 ---
 
 ## Esercizio 6
-Punteggio: 0/5
+Punteggio: 1/5
 
 Obiettivo: Funzioni con parametro e calcoli.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
+Hai tentato di completare l'esercizio ma c'e un errore CRITICO che impedisce al codice di funzionare.
 
-Cosa dovevi fare:
-1. Definire le funzioni calcola_area_quadrato e converti_euro_dollari
-2. Implementare le formule matematiche richieste
-3. Chiamare le funzioni nel programma principale
+Errore riscontrato:
+- Riga 10: Cosa hai scritto: `def calcola_area_quadrato(area):`
+- Problema: Il parametro della funzione si chiama `area` ma dovrebbe chiamarsi `lato`
+- Riga 11: Usi la variabile `lato` che non esiste come parametro
+
+Codice errato:
+```python
+def calcola_area_quadrato(area):
+    area = lato * lato  # ERRORE: 'lato' non e definito!
+    print("L'area del quadrato è:", area)
+```
+
+Codice corretto:
+```python
+def calcola_area_quadrato(lato):
+    area = lato * lato
+    print("L'area del quadrato è:", area)
+```
+
+Spiegazione:
+I parametri di una funzione sono come delle "scatole" in cui metti i valori quando chiami la funzione. Se chiami la funzione con `calcola_area_quadrato(lato)` (riga 27), devi avere un parametro chiamato `lato` nella definizione della funzione. Alla riga 10 hai chiamato il parametro `area`, ma poi alla riga 11 usi `lato` che non esiste, quindi Python da errore: "NameError: name 'lato' is not defined".
+
+Nota positiva: La seconda funzione `converti_euro_dollari` e corretta.
 
 ---
 
 ## Esercizio 7
-Punteggio: 0/5
+Punteggio: 4/5
 
 Obiettivo: Funzioni con logica condizionale.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
+Hai completato l'esercizio e il codice funziona correttamente. Hai implementato bene la logica condizionale con if/else e if/elif/else.
 
-Cosa dovevi fare:
-Implementare due funzioni con logica if/else e if/elif/else per verificare maggiore eta e temperatura.
+Nota:
+- Riga 25: hai scritto `print ("temperatura_piacevole")` invece di `print("Temperatura piacevole")`. Hai usato underscore e minuscole invece del testo richiesto. Il codice funziona ma non segue esattamente la traccia.
+- L'indentazione alla riga 27-28 e un po' irregolare ma non compromette il funzionamento.
 
 ---
 
@@ -111,59 +120,61 @@ Analisi del codice:
 L'esercizio non e stato svolto. Il file e identico alla traccia.
 
 Cosa dovevi fare:
-Creare tre funzioni (stampa_nome_abbonato, calcola_costo_mensile, verifica_livello) e un programma principale che le chiami.
+Definire tre funzioni:
+1. stampa_nome_abbonato(nome) - che stampa il nome dell'abbonato
+2. calcola_costo_mensile(ore_settimanali) - che calcola e stampa il costo (ore * 15)
+3. verifica_livello(anni_esperienza) - che verifica e stampa il livello in base agli anni
+
+E scrivere il programma principale che chiede i dati all'utente e chiama tutte e tre le funzioni.
+
+Questo era un esercizio di riepilogo importante che mette insieme i concetti degli esercizi 5, 6 e 7.
 
 ---
 
 ## Esercizio 9
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con due parametri.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
-
-Cosa dovevi fare:
-Definire e chiamare funzioni con due parametri (stampa_studente e calcola_somma).
+Esercizio completato perfettamente. Hai definito correttamente le funzioni con due parametri e le hai chiamate passando i parametri nel modo giusto.
 
 ---
 
 ## Esercizio 10
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con tre parametri.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
-
-Cosa dovevi fare:
-Implementare funzioni con tre parametri (calcola_media e stampa_prodotto) e chiamarle correttamente.
+Esercizio completato perfettamente. Hai gestito correttamente le funzioni con tre parametri, implementando sia i calcoli (media) che l'output formattato.
 
 ---
 
 ## Esercizio 11
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con parametri e calcoli.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
-
-Cosa dovevi fare:
-Implementare le formule per calcolare perimetro rettangolo e totale con IVA.
+Esercizio completato perfettamente. Hai implementato correttamente entrambe le formule matematiche richieste (perimetro rettangolo e totale con IVA).
 
 ---
 
 ## Esercizio 12
-Punteggio: 0/5
+Punteggio: 4/5
 
 Obiettivo: Funzioni con parametri e logica.
 
 Analisi del codice:
-L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
+Hai completato l'esercizio e il codice funziona correttamente. La prima funzione `verifica_login` e perfetta.
 
-Cosa dovevi fare:
-Implementare funzioni con logica AND e confronto tra numeri.
+Nota sulla seconda funzione:
+- Riga 23: hai scritto correttamente `print(f"{a} e maggiore di {b}")`
+- Riga 25: hai scritto `print(f"{b} e maggiore di {a}")` invece di `print(f"{a} e minore di {b}")`
+
+Spiegazione:
+Le due frasi sono logicamente equivalenti (dire "B e maggiore di A" e lo stesso che dire "A e minore di B"), quindi il programma funziona. Pero la traccia richiedeva specificatamente di scrivere "[a] e minore di [b]". In futuro, quando completi un esercizio, segui esattamente le indicazioni della traccia anche se ci sono modi alternativi corretti.
 
 ---
 
@@ -176,7 +187,9 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare formule per calcolare tempo di viaggio e calorie bruciate.
+1. Definire la funzione `calcola_tempo_viaggio(distanza, velocita)` con formula: tempo = distanza / velocita
+2. Definire la funzione `calcola_calorie(peso, minuti)` con formula: calorie = peso * minuti * 0.05
+3. Chiamare entrambe le funzioni nel programma principale
 
 ---
 
@@ -189,7 +202,11 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare funzioni con validazione e calcolo sconti basati sull'eta.
+1. Definire la funzione `valida_voto(voto)` con if/else per verificare se promosso o bocciato
+2. Definire la funzione `calcola_sconto_eta(prezzo, eta)` con if/elif/else per applicare sconti diversi in base all'eta
+3. Chiamare entrambe le funzioni nel programma principale
+
+Questo esercizio e importante perche combina funzioni, parametri e logica condizionale.
 
 ---
 
@@ -202,7 +219,14 @@ Analisi del codice:
 L'esercizio non e stato svolto. Il file e identico alla traccia.
 
 Cosa dovevi fare:
-Creare un programma completo per un negozio online con tre funzioni e il programma principale.
+Creare un programma completo per un negozio online con:
+1. stampa_ordine(cliente, prodotto, quantita)
+2. calcola_totale(prezzo, quantita, sconto)
+3. verifica_disponibilita(quantita_richiesta, quantita_magazzino)
+
+E scrivere il programma principale che chiede tutti i dati all'utente e chiama tutte le funzioni.
+
+Questo e un esercizio di riepilogo molto importante che mette insieme tutti i concetti visti finora (funzioni con parametri multipli, calcoli, logica condizionale).
 
 ---
 
@@ -215,7 +239,24 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare funzioni con return per restituire valori (calcola_triplo e unisci_nomi).
+1. Definire la funzione `calcola_triplo(numero)` che RESTITUISCE (con return) il triplo
+2. Definire la funzione `unisci_nomi(nome, cognome)` che RESTITUISCE il nome completo
+3. Chiamare le funzioni e salvare i risultati in variabili prima di stamparli
+
+Spiegazione del concetto di return:
+```python
+def calcola_triplo(numero):
+    triplo = numero * 3
+    return triplo  # RESTITUISCE il valore
+
+# Nel programma principale:
+risultato = calcola_triplo(5)  # risultato diventa 15
+print(risultato)  # Stampa 15
+```
+
+Il `return` e diverso dal `print`:
+- `print()` → mostra qualcosa sullo schermo
+- `return` → restituisce un valore che puoi salvare e usare
 
 ---
 
@@ -228,7 +269,9 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare funzioni con return e salvare i valori restituiti in variabili.
+1. Definire la funzione `calcola_area_cerchio(raggio)` che restituisce l'area
+2. Definire la funzione `converti_minuti_ore(minuti)` che restituisce le ore
+3. Chiamare le funzioni, salvare i risultati in variabili e usarli per stampare messaggi
 
 ---
 
@@ -241,7 +284,11 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare funzioni che restituiscono valori diversi in base a condizioni if/else.
+1. Definire la funzione `trova_massimo(a, b)` che restituisce il numero piu grande
+2. Definire la funzione `controlla_password(password)` che restituisce un messaggio in base alla lunghezza
+3. Usare i valori restituiti nel programma principale
+
+Questo esercizio combina `return` con `if/else`, un concetto molto importante.
 
 ---
 
@@ -254,7 +301,9 @@ Analisi del codice:
 L'esercizio non e stato completato. Tutti gli spazi vuoti (___) sono rimasti invariati.
 
 Cosa dovevi fare:
-Implementare formule complesse (prezzo finale e IMC) con return.
+1. Definire la funzione `calcola_prezzo_finale(prezzo, sconto)` con formula complessa e return
+2. Definire la funzione `calcola_imc(peso, altezza)` con formula IMC e return
+3. Usare i valori restituiti nel programma principale
 
 ---
 
@@ -267,89 +316,104 @@ Analisi del codice:
 L'esercizio non e stato svolto. Il file e identico alla traccia.
 
 Cosa dovevi fare:
-Creare un programma completo per calcolare statistiche di gioco con tre funzioni che usano return.
+Creare un programma completo per calcolare statistiche di un gioco:
+1. calcola_punteggio_totale(livello1, livello2, livello3) - restituisce la somma
+2. calcola_media_punteggi(totale, numero_livelli) - restituisce la media
+3. verifica_vittoria(punteggio_totale) - restituisce un messaggio
+
+E scrivere il programma principale che chiama tutte le funzioni, salva i risultati e li stampa.
+
+Questo e l'esercizio di riepilogo finale piu importante che unisce tutti i concetti della verifica: funzioni, parametri multipli, return, calcoli e logica condizionale.
 
 ---
 
 ## Riepilogo e Raccomandazioni
 
-Situazione attuale:
-Non hai completato NESSUNO dei 20 esercizi della verifica. Tutti i file sono identici alle tracce fornite, con tutti gli spazi vuoti (___) lasciati invariati. Questo indica che non hai lavorato sulla verifica o hai avuto gravi difficolta nel comprendere cosa fare.
+Punti di forza:
+- Ottima comprensione delle funzioni senza parametri (esercizi 1, 2, 4)
+- Buona comprensione delle funzioni con parametri (esercizi 5, 9, 10, 11)
+- Buona implementazione della logica condizionale (esercizi 3, 7, 12)
+- I primi 12 esercizi mostrano una comprensione solida dei concetti base
 
-Cosa devi fare URGENTEMENTE:
+Aree da migliorare:
 
-1. **Comprendere le basi della programmazione Python:**
-   - Come si definisce una funzione con `def`
-   - Come si chiama una funzione
-   - Come si passano parametri a una funzione
-   - Come si usa `return` per restituire valori
-   - Come si implementa la logica condizionale (if/elif/else)
+1. **Attenzione ai parametri delle funzioni (CRITICO):**
+   - Esercizio 6: hai confuso il nome del parametro causando un errore grave
+   - Ricorda: il nome del parametro nella definizione deve corrispondere a quello che usi nel corpo della funzione
+   - Esempio CORRETTO: `def funzione(x):` e poi usi `x` nel corpo, NON un'altra variabile
 
-2. **Rivedere TUTTI gli esercizi:**
-   - Inizia dagli esercizi piu semplici (1-4)
-   - Segui la progressione graduale degli esercizi
-   - Chiedi aiuto al docente se non capisci i concetti base
-   - Studia gli esempi forniti nelle lezioni
+2. **Concetto di return (FONDAMENTALE):**
+   - Non hai completato NESSUNO degli esercizi 16-20 che riguardano il `return`
+   - Il `return` e un concetto ESSENZIALE per continuare a programmare
+   - Senza capire il `return` non puoi scrivere funzioni che restituiscono valori
 
-3. **Svolgere la verifica completamente:**
-   - Dedica tempo a completare TUTTI i 20 esercizi
-   - Inizia con calma dai primi esercizi
-   - Prova a eseguire il codice per verificare che funzioni
-   - Non lasciare gli spazi vuoti (___) senza compilarli
+3. **Completare tutti gli esercizi:**
+   - Hai completato solo 12 esercizi su 20
+   - Gli esercizi di riepilogo (8, 15, 20) sono particolarmente importanti
+   - Gli esercizi 13-20 coprono concetti avanzati che devi assolutamente imparare
 
-4. **Richiedere supporto:**
-   - Parla con il docente per capire le tue difficolta
-   - Chiedi spiegazioni sui concetti che non hai capito
-   - Partecipa attivamente alle lezioni
-   - Chiedi esempi pratici per capire meglio
+4. **Attenzione ai dettagli:**
+   - Esercizio 3: errori di ortografia nell'output
+   - Esercizio 7: formato output diverso dalla traccia
+   - Esercizio 12: messaggio corretto logicamente ma diverso dalla traccia
 
-Concetti da studiare:
+Esercizi da rifare OBBLIGATORIAMENTE:
 
-**Concetto 1 - Definire una funzione:**
-```python
-def nome_funzione():
-    print("Ciao!")
-```
+**PRIORITA MASSIMA (errori critici o concetti fondamentali):**
+- **Esercizio 6:** Correggere l'errore del parametro (lato vs area)
+- **Esercizio 16:** Introduzione al return - FONDAMENTALE
+- **Esercizio 17:** Usare valori restituiti - FONDAMENTALE
+- **Esercizio 18:** Return con logica - FONDAMENTALE
 
-**Concetto 2 - Chiamare una funzione:**
-```python
-nome_funzione()  # Esegue la funzione
-```
+**ALTA PRIORITA (esercizi di riepilogo e avanzati):**
+- **Esercizio 8:** Riepilogo parametri
+- **Esercizio 13:** Calcoli complessi
+- **Esercizio 14:** Validazione
+- **Esercizio 15:** Riepilogo parametri multipli
+- **Esercizio 19:** Return con calcoli complessi
+- **Esercizio 20:** Riepilogo finale con return
 
-**Concetto 3 - Funzioni con parametri:**
-```python
-def saluta(nome):
-    print("Ciao", nome)
-
-saluta("Mario")  # Stampa: Ciao Mario
-```
-
-**Concetto 4 - Funzioni con return:**
-```python
-def calcola_doppio(numero):
-    risultato = numero * 2
-    return risultato
-
-valore = calcola_doppio(5)  # valore diventa 10
-print(valore)  # Stampa: 10
-```
-
-**Concetto 5 - Logica condizionale:**
-```python
-def verifica_eta(eta):
-    if eta >= 18:
-        print("Maggiorenne")
-    else:
-        print("Minorenne")
-```
+**BASSA PRIORITA (miglioramenti minori):**
+- **Esercizio 3:** Correggere ortografia output
+- **Esercizio 7:** Usare formato output corretto
+- **Esercizio 12:** Seguire esattamente la traccia nei messaggi
 
 Valutazione generale:
-La situazione e molto seria. Non aver completato nemmeno un esercizio indica una lacuna completa nei concetti base della programmazione Python. E fondamentale che tu riprenda lo studio dalle basi, segua le lezioni con attenzione, faccia pratica con esercizi semplici e chieda aiuto al docente. Senza comprendere questi concetti fondamentali, non puoi progredire nel corso. Ti consiglio di:
+Hai dimostrato una buona comprensione dei concetti base delle funzioni Python (definizione, chiamata, parametri). I tuoi punti di forza sono negli esercizi 1-12, dove hai mostrato capacita solide. Tuttavia, hai due problemi principali:
 
-1. Parlare immediatamente con il docente
-2. Rivedere tutte le lezioni sulle funzioni
-3. Fare gli esercizi base uno per uno, partendo dal primo
-4. Chiedere spiegazioni dettagliate per ogni concetto che non capisci
-5. Dedicare piu tempo allo studio e alla pratica
+1. **Errore critico nell'esercizio 6**: confondere i parametri e un errore grave che blocca l'esecuzione. Devi prestare molta attenzione ai nomi dei parametri.
 
-Ricorda: la programmazione richiede pratica costante. Inizia con esercizi semplici, prova il codice, verifica che funzioni, e procedi gradualmente. Non avere paura di sbagliare: gli errori sono parte del processo di apprendimento. L'importante e iniziare e chiedere aiuto quando necessario.
+2. **Mancanza completa del concetto di return**: non hai completato nessuno degli esercizi 16-20. Il `return` e un concetto FONDAMENTALE per la programmazione. Senza capirlo, non puoi progredire.
+
+Cosa fare ora:
+
+1. **Correggi immediatamente l'esercizio 6** - capire l'errore dei parametri e cruciale
+2. **Studia il concetto di return** - chiedi spiegazioni al docente, guarda esempi
+3. **Completa gli esercizi 16-20** - dedica tempo a questi esercizi, sono la base per tutto il resto
+4. **Fai gli esercizi di riepilogo** - esercizi 8, 15, 20 sono essenziali per consolidare
+
+Concetto chiave da studiare - Il Return:
+
+```python
+# Senza return (stampa solo):
+def calcola_doppio_stampa(numero):
+    risultato = numero * 2
+    print(risultato)  # Stampa ma NON restituisce
+
+calcola_doppio_stampa(5)  # Stampa: 10
+x = calcola_doppio_stampa(5)  # x diventa None!
+
+# Con return (restituisce il valore):
+def calcola_doppio_return(numero):
+    risultato = numero * 2
+    return risultato  # RESTITUISCE il valore
+
+x = calcola_doppio_return(5)  # x diventa 10
+print(x * 3)  # Puoi usare il valore restituito: stampa 30
+```
+
+La differenza:
+- `print()` → mostra sullo schermo (per l'utente)
+- `return` → restituisce un valore (per il programma)
+
+Hai fatto un miglioramento significativo rispetto alla prima consegna (dove avevi 0/100). Ora hai 48/100, che mostra che stai imparando i concetti base. Concentrati sul `return` e sugli esercizi rimanenti per migliorare ulteriormente.

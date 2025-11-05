@@ -7,7 +7,7 @@
 # DEFINISCI UNA FUNZIONE chiamata 'verifica_maggiorenne' che prende 'eta'
 # - Se eta >= 18: stampa "Sei maggiorenne"
 # - Altrimenti: stampa "Sei minorenne"
-def verifica_maggiorenne (eta):
+def verifica_maggiorenne(eta):
     if eta >= 18:
         print("Sei maggiorenne")
     else:
@@ -20,13 +20,11 @@ def verifica_maggiorenne (eta):
 # - Altrimenti: stampa "Fa freddo"
 def verifica_temperatura(gradi):
     if gradi > 30:
-        print("fa molto caldo")
+        print ("Fa molto caldo")
     elif gradi >= 20:
-       print ("temperatura_piacevole")
-    else :
-    
-        print ("fa freddo")
-
+        print("Temperatura piacevole")
+    else:
+        print("Fa freddo")
 
 
 # Programma principale

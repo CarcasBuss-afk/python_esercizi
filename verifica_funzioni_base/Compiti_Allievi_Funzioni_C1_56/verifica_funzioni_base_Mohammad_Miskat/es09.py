@@ -7,14 +7,14 @@
 # DEFINISCI UNA FUNZIONE chiamata 'stampa_studente' che prende 'nome' e 'corso'
 # e stampa "Studente: [nome], Corso: [corso]"
 def stampa_studente(nome, corso):
-    print("Studente:", nome, ", Corso:", corso)
+    print(f"Studente:", {nome}, ", Corso:", {corso})
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'calcola_somma' che prende 'num1' e 'num2'
 # e stampa "La somma è: [risultato]"
 def calcola_somma(num1, num2):
     risultato = num1 + num2
-    print("La somma è:", risultato)
+    print(f"La somma è:", {risultato})
 
 
 # Programma principale

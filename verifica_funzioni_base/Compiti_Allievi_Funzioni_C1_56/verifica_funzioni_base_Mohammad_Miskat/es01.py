@@ -17,7 +17,7 @@ def mostra_orari():
 
 
 # CHIAMA la funzione mostra_benvenuto
-mostra_benvenuto()
+mostra_benvenuto() 
 
 # CHIAMA la funzione mostra_orari
 mostra_orari()

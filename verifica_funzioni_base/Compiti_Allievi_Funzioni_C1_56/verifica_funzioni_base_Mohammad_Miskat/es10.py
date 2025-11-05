@@ -8,14 +8,14 @@
 # e stampa "Media: [media]"
 # Formula: media = (voto1 + voto2 + voto3) / 3
 def calcola_media(voto1, voto2, voto3):
-    media = (voto1 + voto2 + voto3) / 3
-    print("Media:", media)
+    calc = (voto1 + voto2 + voto3) / 3
+    print("Media:", calc)
 
 
 # DEFINISCI UNA FUNZIONE chiamata 'stampa_prodotto' che prende 'nome', 'prezzo', 'quantita'
 # e stampa "Prodotto: [nome], Prezzo: €[prezzo], Quantità: [quantita]"
 def stampa_prodotto(nome, prezzo, quantita):
-    print("Prodotto:", nome, ", Prezzo: €", prezzo, ", Quantità:", quantita)
+    print(f"Prodotto:", {nome}, ", Prezzo: €", {prezzo}, ", Quantità:", {quantita})
 
 
 # Programma principale
