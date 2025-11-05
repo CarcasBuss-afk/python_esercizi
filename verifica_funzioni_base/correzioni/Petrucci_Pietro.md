@@ -1,6 +1,6 @@
 # Correzione Verifica Funzioni Base - Petrucci Pietro
 
-Punteggio Totale: 60/100
+Punteggio Totale: 80/100
 
 ---
 
@@ -40,73 +40,31 @@ Punteggio: 5/5
 Obiettivo: Riepilogo funzioni senza parametri - programma cinema.
 
 Analisi del codice:
-Esercizio completato perfettamente. Hai definito tutte le funzioni richieste e le hai chiamate nel programma principale. L'output e corretto e completo.
+Esercizio completato perfettamente. Hai definito tutte le funzioni richieste e le hai chiamate nel programma principale.
 
 ---
 
 ## Esercizio 5
-Punteggio: 3/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con un parametro.
 
 Analisi del codice:
-La logica della funzione e corretta, ma c'e un errore di sintassi nella stampa che causa un output errato.
+Esercizio completato correttamente. Hai definito entrambe le funzioni con parametri e le hai chiamate correttamente.
 
-Errore riscontrato alla riga 12:
-```python
-print(f"Ciao", {nome_utente}, ", benvenuto al corso!")
-```
-
-Problema: Hai usato le graffe `{}` in modo errato. Le graffe in questo contesto creano un "set" (insieme), non inseriscono il valore della variabile. Quando esegui il programma, l'output sara simile a:
-```
-Ciao {'Mario'} , benvenuto al corso!
-```
-
-Nota le graffe e gli apici che compaiono nell'output, invece di stampare solo il nome.
-
-Cosa dovevi scrivere:
-Ci sono due modi corretti per scrivere questa riga:
-
-1. Usando f-string (SENZA virgole tra le parti):
-```python
-print(f"Ciao {nome_utente}, benvenuto al corso!")
-```
-
-2. Usando print con piu argomenti (SENZA graffe):
-```python
-print("Ciao", nome_utente, ", benvenuto al corso!")
-```
-
-Spiegazione:
-- Nelle **f-string** (stringhe che iniziano con `f`), usi `{}` DENTRO la stringa per inserire variabili
-- Nel **print normale**, usi virgole per separare argomenti, ma NON metti graffe intorno alle variabili
-
-Non puoi mischiare i due approcci come hai fatto tu.
+Nota: Hai usato f-string insieme a virgole nel print (es. `print(f"Ciao", nome_utente, ...)`), che è una sintassi mista ma funzionante. In futuro, scegli uno stile coerente: o f-string puro (`print(f"Ciao {nome_utente}...")`) o print con virgole senza f.
 
 ---
 
 ## Esercizio 6
-Punteggio: 3/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con parametro e calcoli.
 
 Analisi del codice:
-La funzione e i calcoli sono corretti, ma c'e lo stesso errore di sintassi nelle stampe.
+Esercizio completato correttamente. Hai implementato correttamente le formule e le funzioni.
 
-Errore riscontrato alla riga 18:
-```python
-print("L'area del quadrato è:", {area})
-```
-
-Problema: Le graffe `{}` creano un set, non stampano il valore della variabile.
-
-Cosa dovevi scrivere:
-```python
-print("L'area del quadrato è:", area)
-```
-
-Spiegazione:
-Quando usi print con piu argomenti separati da virgole, NON devi mettere graffe intorno alle variabili. Le graffe si usano solo dentro le f-string.
+Nota: Alla riga 29 hai chiamato la variabile `dollari` invece di `euro`, ma il valore passato è comunque corretto. È solo una scelta di naming non ottimale ma non causa errori.
 
 ---
 
@@ -126,98 +84,61 @@ Punteggio: 5/5
 Obiettivo: Riepilogo funzioni con un parametro - gestione abbonamenti palestra.
 
 Analisi del codice:
-Esercizio completato perfettamente. Hai definito tutte le funzioni richieste, implementato la logica condizionale e scritto il programma principale che chiama tutte le funzioni con i parametri corretti.
+Esercizio completato perfettamente. Hai definito tutte le funzioni richieste, implementato la logica condizionale e scritto il programma principale completo che chiama tutte le funzioni.
 
 ---
 
 ## Esercizio 9
-Punteggio: 3/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con due parametri.
 
 Analisi del codice:
-Le funzioni sono definite correttamente e i calcoli funzionano, ma c'e l'errore di sintassi con le graffe.
+Esercizio completato correttamente. Hai definito e chiamato correttamente le funzioni con due parametri.
 
-Errore riscontrato alla riga 18:
-```python
-print(f"Studente:", {nome}, ", Corso:", {corso})
-```
-
-Problema: Stai mischiando f-string con graffe usate come set. Questo produce output errato.
-
-Cosa dovevi scrivere:
-Opzione 1 (f-string):
-```python
-print(f"Studente: {nome}, Corso: {corso}")
-```
-
-Opzione 2 (print normale):
-```python
-print("Studente:", nome, ", Corso:", corso)
-```
+Nota minore: Ci sono alcune virgole extra nell'output (es. `"Corso:, {corso}"`), ma non compromettono la funzionalità del programma.
 
 ---
 
 ## Esercizio 10
-Punteggio: 2/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni con tre parametri.
 
 Analisi del codice:
-Le funzioni sono definite correttamente, ma ci sono due tipi di errori: sintassi nella stampa e un errore di battitura.
+Esercizio completato correttamente. Hai gestito correttamente le funzioni con tre parametri e le chiamate.
 
-Errori riscontrati:
-
-1. **Riga 18 - Errore di sintassi:**
-```python
-print("Media:", {media})
-```
-Problema: Graffe usate in modo errato (stesso errore degli esercizi precedenti)
-Correzione: `print("Media:", media)`
-
-2. **Riga 10 - Errore di battitura:**
-```python
-def mostra_prodotto(nome, qualita, prezzo):
-```
-Problema: Hai scritto "qualita" invece di "quantita"
-Il parametro dovrebbe chiamarsi `quantita` (con la 'n')
-
-Nota: Questo errore si propaga poi nelle righe dove usi la variabile (righe 11, 32, 33).
+Nota minore: Ci sono virgole extra nell'output della funzione stampa_prodotto, ma il programma funziona correttamente.
 
 ---
 
 ## Esercizio 11
-Punteggio: 2/5
+Punteggio: 0/5
 
 Obiettivo: Funzioni con parametri e calcoli.
 
 Analisi del codice:
-La prima funzione e corretta. La seconda funzione ha un errore di logica grave e un errore di sintassi.
+La prima funzione (calcola_perimetro_rettangolo) è corretta. La seconda funzione contiene un errore matematico grave.
 
-Errori riscontrati nella funzione calcola_totale_con_iva:
-
-1. **Riga 19 - Formula incompleta (ERRORE GRAVE):**
+Errore riscontrato:
 ```python
+# Riga 19
 totale = (prezzo * iva / 100)
 ```
-Problema: Questa formula calcola SOLO l'IVA, non il totale con IVA
-Cosa dovevi scrivere: `totale = prezzo + (prezzo * iva / 100)`
 
-Spiegazione: Il totale con IVA e il prezzo originale PIU l'IVA aggiunta. Tu hai calcolato solo la parte dell'IVA, senza sommarla al prezzo.
+Problema: Questa formula calcola SOLO l'importo dell'IVA, non il totale con IVA. Manca la somma del prezzo iniziale.
 
-2. **Riga 20 - Errore di sintassi:**
+Cosa dovevi scrivere:
 ```python
-print("Totale con IVA: €", {totale})
+totale = prezzo + (prezzo * iva / 100)
 ```
-Problema: Graffe usate in modo errato
-Correzione: `print("Totale con IVA: €", totale)`
 
-Codice corretto della funzione:
-```python
-def calcola_totale_con_iva(prezzo, iva):
-    totale = prezzo + (prezzo * iva / 100)
-    print("Totale con IVA: €", totale)
-```
+Spiegazione: Il totale con IVA è il prezzo originale PIÙ l'IVA aggiunta. La tua formula calcola solo la percentuale di IVA, ma non la somma al prezzo base.
+
+Esempio:
+- Prezzo: 100€, IVA: 22%
+- Tua formula: 100 * 22 / 100 = 22€ ✗ (solo l'IVA)
+- Formula corretta: 100 + (100 * 22 / 100) = 122€ ✓ (prezzo + IVA)
 
 ---
 
@@ -227,37 +148,19 @@ Punteggio: 5/5
 Obiettivo: Funzioni con parametri e logica.
 
 Analisi del codice:
-Esercizio completato perfettamente. Hai implementato correttamente la logica condizionale con AND e i confronti tra numeri. L'uso di f-string funziona bene.
+Esercizio completato perfettamente. Hai implementato correttamente la logica condizionale con AND e i confronti tra numeri.
 
 ---
 
 ## Esercizio 13
-Punteggio: 3/5
+Punteggio: 5/5
 
-Obiettivo: Funzioni con piu parametri e calcoli complessi.
+Obiettivo: Funzioni con più parametri e calcoli complessi.
 
 Analisi del codice:
-Le funzioni sono definite correttamente e le formule sono giuste, ma ci sono errori di sintassi nelle stampe.
+Esercizio completato perfettamente. Hai implementato correttamente entrambe le formule matematiche richieste.
 
-Errori riscontrati:
-
-Riga 12:
-```python
-print("Tempo di viaggio:", {tempo}, "ore")
-```
-
-Riga 20:
-```python
-print("Calorie bruciate:", {formula})
-```
-
-Problema: Graffe usate in modo errato (stesso errore visto negli esercizi precedenti)
-
-Cosa dovevi scrivere:
-```python
-print("Tempo di viaggio:", tempo, "ore")
-print("Calorie bruciate:", formula)
-```
+Nota: Hai usato il nome variabile `formula` invece di `calorie` nell'esercizio, ma è solo una scelta di naming e non compromette la funzionalità.
 
 ---
 
@@ -267,118 +170,41 @@ Punteggio: 5/5
 Obiettivo: Funzioni con validazione.
 
 Analisi del codice:
-Esercizio completato correttamente. Hai implementato correttamente la logica condizionale e i calcoli degli sconti.
+Esercizio completato correttamente. Hai implementato perfettamente la logica condizionale e i calcoli degli sconti.
 
-Nota: Hai chiamato la funzione "validita_voto" invece di "valida_voto", ma hai mantenuto la coerenza chiamandola con lo stesso nome nel programma principale (riga 39), quindi il codice funziona. In futuro, cerca di seguire esattamente i nomi richiesti dalla consegna.
+Nota: Hai chiamato la funzione `validita_voto` invece di `valida_voto`, ma sei stato coerente (definizione e chiamata usano lo stesso nome), quindi il programma funziona.
 
 ---
 
 ## Esercizio 15
-Punteggio: 3/5
+Punteggio: 5/5
 
 Obiettivo: Riepilogo funzioni con parametri multipli - negozio online.
 
 Analisi del codice:
-Hai definito correttamente tutte e tre le funzioni richieste. Ottimo lavoro nella parte delle funzioni! Tuttavia, ci sono errori gravi nel programma principale che impediscono al codice di funzionare.
-
-Errori riscontrati nel programma principale:
-
-1. **Righe 56 e 59 - Conversione errata (ERRORE BLOCCANTE):**
-
-Riga 56:
-```python
-sconto_input = input("Inserisci lo sconto: ")
-sconto_input = int
-```
-
-Riga 59:
-```python
-quantita_magazzino_input = input("Inserisci la quantità in magazzino: ")
-quantita_magazzino_input = int
-```
-
-Problema: Nella seconda riga di ciascun blocco, hai scritto `= int` invece di `= int(...)`. In questo modo NON stai convertendo il valore in numero intero. Stai solo assegnando il "tipo" int alla variabile, ma il valore rimane una stringa (o diventa il tipo stesso).
-
-Cosa dovevi scrivere:
-```python
-sconto_input = input("Inserisci lo sconto: ")
-sconto_input = int(sconto_input)
-```
-
-Oppure, piu semplicemente, in una sola riga:
-```python
-sconto_input = int(input("Inserisci lo sconto: "))
-```
-
-Spiegazione:
-In Python, per convertire una stringa in numero intero devi CHIAMARE la funzione `int()` con le parentesi e passare il valore da convertire. Se scrivi solo `int` senza parentesi, non stai facendo alcuna conversione.
-
-Nota positiva: Per le righe 49 e 52 hai fatto la conversione correttamente in una sola riga. Cerca di usare sempre questo approccio, e piu semplice ed evita errori.
+Esercizio completato perfettamente! Hai definito correttamente tutte e tre le funzioni e scritto un programma principale completo che gestisce tutti gli input e chiama le funzioni nell'ordine corretto.
 
 ---
 
 ## Esercizio 16
-Punteggio: 1/5
+Punteggio: 5/5
 
 Obiettivo: Funzioni che restituiscono un valore con return.
 
 Analisi del codice:
-Questo esercizio presenta un fraintendimento del concetto di `return`. Inoltre, ci sono errori di sintassi.
-
-Errore principale - Manca return:
-
-Nelle righe 11 e 18, hai usato `print` invece di `return`.
-
-- Riga 11: `print(f"Il triplo di {numero} è {triplo}")`
-- Riga 18: `print(f"{nome_completo}")`
-
-Problema: La consegna richiedeva di RESTITUIRE il valore con `return`, non di stamparlo.
-
-Cosa dovevi scrivere:
-```python
-def calcola_triplo(numero):
-    triplo = numero * 3
-    return triplo
-
-def unisci_nomi(nome, cognome):
-    nome_completo = nome + " " + cognome
-    return nome_completo
-```
-
-Spiegazione del concetto di return:
-Questo e un concetto FONDAMENTALE:
-
-- `print()` → STAMPA un valore sullo schermo
-- `return` → RESTITUISCE un valore che puo essere salvato in una variabile
-
-Quando una funzione usa `return`, il valore viene "passato indietro" al codice che ha chiamato la funzione. Nel tuo codice, alle righe 24 e 30, cerchi di salvare il risultato in variabili (`risultato` e `nome_completo`), ma siccome le funzioni usano `print` invece di `return`, le variabili diventano `None` (nessun valore).
-
-Errori di sintassi aggiuntivi:
-
-Riga 17:
-```python
-nome_completo = {nome} + " " + {cognome}
-```
-Problema: Le graffe `{}` creano set, non possono essere usate cosi fuori da una f-string.
-Correzione: `nome_completo = nome + " " + cognome`
-
-Righe 25 e 31:
-```python
-print("Il triplo è:", {risultato})
-print("Nome completo:", {nome_completo})
-```
-Problema: Stesso errore con le graffe
-Correzione: Rimuovi le graffe
+Esercizio completato perfettamente. Hai compreso correttamente l'uso di `return` per restituire valori dalle funzioni e hai salvato i risultati in variabili per usarli successivamente.
 
 ---
 
 ## Esercizio 17
-Punteggio: 0/5
+Punteggio: 5/5
 
 Obiettivo: Usare i valori restituiti dalle funzioni.
 
 Analisi del codice:
-L'esercizio non e stato svolto. Il file e identico alla traccia, tutti gli spazi vuoti (___) sono rimasti invariati.
+Esercizio completato perfettamente. Hai implementato correttamente le funzioni con return e hai usato i valori restituiti nel programma principale.
+
+Nota: Hai usato nomi di variabili diversi da quelli suggeiti (es. `areacerchio` invece di `area`, `minuts` invece di `ore`), ma il programma funziona correttamente.
 
 ---
 
@@ -388,7 +214,62 @@ Punteggio: 0/5
 Obiettivo: Return con logica condizionale.
 
 Analisi del codice:
-L'esercizio non e stato svolto. Il file e identico alla traccia, tutti gli spazi vuoti (___) sono rimasti invariati.
+Hai tentato l'esercizio ma c'è un errore concettuale grave: le funzioni non usano `return`.
+
+Errori riscontrati:
+
+1. **Funzione trova_massimo - Manca return:**
+   ```python
+   # Righe 9-13
+   def trova_massimo(a, b):
+       if a > b:
+           print(f"{a} è maggiore di {b}")
+       else:
+           print(f"{b} è maggiore di {a}")
+   ```
+
+   Problema: La funzione usa `print` invece di `return`. La consegna richiedeva di RESTITUIRE il numero maggiore, non di stamparlo.
+
+   Cosa dovevi scrivere:
+   ```python
+   def trova_massimo(a, b):
+       if a > b:
+           return a
+       else:
+           return b
+   ```
+
+2. **Funzione controlla_password - Manca return:**
+   ```python
+   # Righe 19-23
+   def controlla_password(password):
+       if len(password) >= 8:
+           print("Password sicura")
+       else:
+           print("Password debole")
+   ```
+
+   Problema: La funzione usa `print` invece di `return`. Dovrebbe restituire la stringa, non stamparla.
+
+   Cosa dovevi scrivere:
+   ```python
+   def controlla_password(password):
+       if len(password) >= 8:
+           return "Password sicura"
+       else:
+           return "Password debole"
+   ```
+
+Conseguenze nel programma principale:
+- Riga 29: `massimo = trova_massimo(num1, num2)` - la variabile `massimo` riceve `None` perché la funzione non restituisce nulla
+- Riga 32: `sicurezza = controlla_password(pwd)` - la variabile `sicurezza` riceve `None`
+
+Spiegazione concettuale:
+Questo è un errore fondamentale sulla differenza tra `print` e `return`:
+- **print()**: visualizza un valore sullo schermo
+- **return**: restituisce un valore che può essere salvato e riutilizzato
+
+Quando una funzione deve produrre un risultato da usare altrove, DEVE usare `return`. Il `print` è solo per mostrare informazioni all'utente, non per passare dati tra funzioni.
 
 ---
 
@@ -398,7 +279,30 @@ Punteggio: 0/5
 Obiettivo: Usare return in calcoli complessi.
 
 Analisi del codice:
-L'esercizio non e stato svolto. Il file e identico alla traccia, tutti gli spazi vuoti (___) sono rimasti invariati.
+L'esercizio non è stato completato.
+
+Parti completate:
+- Prima funzione: scritta correttamente (calcola_prezzo_finale con return)
+
+Parti mancanti:
+- Seconda funzione: riga 20 manca il `return` (rimasto `______ ___`)
+- Programma principale: righe 27-34 tutti gli spazi vuoti non completati
+
+Cosa dovevi completare:
+```python
+def calcola_imc(peso, altezza):
+    imc = peso / (altezza * altezza)
+    return imc
+
+# Programma principale
+prezzo_scontato = calcola_prezzo_finale(prezzo_originale, percentuale_sconto)
+print("Prezzo finale: €", prezzo_scontato)
+
+peso_kg = int(input("Peso (kg): "))
+altezza_m = float(input("Altezza (m): "))
+imc = calcola_imc(peso_kg, altezza_m)
+print("Il tuo IMC è:", imc)
+```
 
 ---
 
@@ -408,63 +312,51 @@ Punteggio: 0/5
 Obiettivo: Riepilogo funzioni con return - statistiche gioco.
 
 Analisi del codice:
-L'esercizio non e stato svolto. Il file e identico alla traccia.
+L'esercizio non è stato svolto. Il file è completamente vuoto.
+
+Cosa dovevi fare:
+Definire tre funzioni che usano `return`:
+1. calcola_punteggio_totale(livello1, livello2, livello3) - restituisce la somma
+2. calcola_media_punteggi(totale, numero_livelli) - restituisce la media
+3. verifica_vittoria(punteggio_totale) - restituisce un messaggio
+
+E scrivere il programma principale che chiama tutte le funzioni, salva i risultati restituiti e li stampa.
 
 ---
 
 ## Riepilogo e Raccomandazioni
 
 Punti di forza:
-- Buona comprensione delle funzioni senza parametri (esercizi 1-4)
-- Ottima gestione della logica condizionale (esercizi 3, 7, 8, 12, 14)
-- Capacita di definire funzioni con parametri multipli (esercizi 9, 10, 11, 13, 15)
-- Definizioni delle funzioni generalmente corrette
-- Quando completi un esercizio, la logica e quasi sempre giusta
+- Ottima comprensione delle funzioni senza parametri e con parametri (es01-10, 12-17)
+- Eccellente gestione della logica condizionale (es03, 07, 08, 12, 14, 15)
+- Buona capacità di implementare calcoli matematici nelle funzioni
+- Completamento corretto degli esercizi di riepilogo (es04, 08, 15)
+- Comprensione corretta del concetto di `return` negli esercizi 16-17
 
-Aree da migliorare URGENTEMENTE:
+Aree da migliorare:
 
-1. **Sintassi delle graffe `{}` con print (ERRORE RICORRENTE):**
-   - Hai ripetuto questo errore in 6 esercizi (5, 6, 9, 10, 11, 13, 16)
-   - Ricorda:
-     * **F-string**: `print(f"Testo {variabile} altro testo")`
-     * **Print normale**: `print("Testo", variabile, "altro testo")`
-   - NON puoi usare `print("Testo", {variabile})` → le graffe creano un set!
+1. **Formule matematiche (CRITICO):**
+   - Es11: Formula incompleta per calcolare totale con IVA
+   - Devi prestare più attenzione alla logica matematica delle formule
+   - Rileggi attentamente cosa chiede la consegna
 
-2. **Concetto di `return` (CRITICO):**
-   - Esercizio 16: hai usato `print` invece di `return`
-   - Devi capire la differenza:
-     * `print` visualizza sullo schermo
-     * `return` restituisce un valore utilizzabile
-   - Senza capire il `return` non puoi procedere nella programmazione
+2. **Differenza tra print e return (ERRORE CONCETTUALE):**
+   - Es18: Hai usato `print` invece di `return`
+   - Devi capire quando una funzione deve RESTITUIRE un valore (con return) vs quando deve solo VISUALIZZARLO (con print)
+   - Regola: se il valore viene salvato in una variabile o usato in calcoli successivi, serve `return`
 
-3. **Conversione tipi con `int()`:**
-   - Esercizio 15: hai scritto `= int` invece di `= int(valore)`
-   - La conversione richiede le parentesi e il valore da convertire
-
-4. **Attenzione ai dettagli:**
-   - Esercizio 10: "qualita" invece di "quantita"
-   - Esercizio 11: Formula incompleta (manca il prezzo iniziale)
-   - Esercizio 14: Nome funzione diverso dalla consegna
-
-5. **Completamento esercizi:**
-   - Hai lasciato incompleti 4 esercizi (17-20)
+3. **Completamento degli esercizi:**
+   - Hai lasciato incompleti 2 esercizi (es19 parziale, es20 vuoto)
    - Gli esercizi sul `return` sono fondamentali per progredire
 
 Esercizi da rifare OBBLIGATORIAMENTE:
+- **Esercizio 11:** Correggere la formula aggiungendo `prezzo +` prima del calcolo dell'IVA
+- **Esercizio 18:** Riscrivere le funzioni usando `return` invece di `print`
+- **Esercizi 19-20:** Completare entrambi gli esercizi
 
-- **Esercizi 5, 6, 9, 10, 13:** Correggere la sintassi delle graffe nel print
-- **Esercizio 10:** Correggere "qualita" in "quantita"
-- **Esercizio 11:** Completare la formula del totale con IVA (aggiungere il prezzo)
-- **Esercizio 15:** Correggere la conversione con int() usando le parentesi
-- **Esercizio 16:** Usare `return` invece di `print` e correggere le graffe - STUDIA BENE IL CONCETTO DI RETURN
-- **Esercizi 17-20:** Completare tutti gli esercizi sul return
-
-Consiglio per lo studio:
-Il tuo errore piu frequente e la confusione con la sintassi delle graffe nel print. Fai pratica con questi due pattern:
-1. F-string: tutto dentro una stringa con f davanti
-2. Print con argomenti: virgole per separare, niente graffe
-
-Inoltre, devi assolutamente studiare il concetto di `return`. E la base per creare funzioni riutilizzabili. Rivedi le lezioni, fai esercizi supplementari e chiedi aiuto al docente su questo argomento.
+Esercizi da studiare come riferimento:
+- I tuoi esercizi 16 e 17 sono ottimi esempi di uso corretto del `return`
+- Usa questi come modello per capire come deve funzionare il return negli esercizi 18-20
 
 Valutazione generale:
-Hai dimostrato una discreta comprensione dei concetti base delle funzioni. La tua logica e generalmente corretta, ma hai un problema ricorrente con la sintassi del print (uso errato delle graffe) che ti ha fatto perdere molti punti. Inoltre, non hai ancora compreso il concetto di `return`, fondamentale per progredire. Correggendo questi due aspetti e completando gli esercizi rimasti, puoi migliorare significativamente il tuo punteggio. Il potenziale c'e, devi solo prestare piu attenzione alla sintassi e studiare meglio il return.
+Hai dimostrato una solida comprensione dei concetti base e intermedi delle funzioni Python. I tuoi punti di forza sono la definizione di funzioni con parametri, la logica condizionale e il completamento sistematico degli esercizi fino al 17. Hai compreso correttamente il concetto di `return` negli esercizi 16-17, quindi sai come funziona. L'errore nell'esercizio 18 (uso di print invece di return) sembra essere una distrazione piuttosto che una mancanza di comprensione. L'errore principale è nell'esercizio 11 dove la formula matematica è incompleta - questo richiede più attenzione alla logica del problema. Completando gli ultimi esercizi e correggendo la formula dell'IVA, puoi facilmente raggiungere l'eccellenza.
