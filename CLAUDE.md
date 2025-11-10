@@ -220,11 +220,22 @@ Per ogni esercizio:
 
 3. **Assegna punteggio**:
    - 5/5: Completamente corretto (anche con variazioni di stile)
-   - 4/5: Un errore minore non bloccante
-   - 3/5: Errore significativo ma funzione parzialmente corretta
-   - 2/5: Errore grave, funziona parzialmente
+   - 4/5: SOLO errori di battitura/typo che non compromettono la logica (es. "esmpio" invece di "esempio", "liguaggio" invece di "linguaggio")
+   - 3/5: Errore significativo di formato/output o logica parzialmente errata
+   - 2/5: Errore grave nella logica, funziona parzialmente
    - 1/5: Errore molto grave, quasi non funziona
    - 0/5: Non svolto o completamente errato
+
+   **IMPORTANTE - Distinzione tra errori di battitura e errori logici**:
+   - **Errore di battitura (4/5)**: Errore ortografico in una stringa che produce output diverso da quello atteso, MA la logica del codice è corretta
+     - Esempio: `email += "esmpio"` invece di `email += "esempio"` → produce "mario@esmpio.com" invece di "mario@esempio.com"
+     - Penalità: -1 punto
+   - **Errore di formato/output (3/5)**: Output manca parti richieste o ha formato completamente diverso
+     - Esempio: manca "Nome:" all'inizio della riga quando richiesto
+     - Penalità: -2 punti
+   - **Errore logico (2/5 o 0/5)**: La logica del codice è errata, non solo l'output
+     - Esempio: usa variabile sbagliata, condizioni if/else errate
+     - Penalità: -3 punti o 0 punti se completamente errato
 
 #### Fase 3: Documentazione nel File MD
 

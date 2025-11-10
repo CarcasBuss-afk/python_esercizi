@@ -1,6 +1,6 @@
 # Correzione Verifica Stringhe Base A - Roscio Giacomo
 
-Punteggio Totale: 71/100
+Punteggio Totale: 73/100
 
 ---
 
@@ -45,12 +45,12 @@ Esercizio completato perfettamente. Hai usato correttamente l'operatore += per a
 ---
 
 ## Esercizio 5
-Punteggio: 3/5
+Punteggio: 4/5
 
 Obiettivo: Costruire un indirizzo email usando +=
 
 Analisi del codice:
-Hai tentato l'esercizio ma c'è un errore di battitura che produce un output errato.
+Hai completato l'esercizio con la logica corretta, ma c'è un errore di battitura nell'output.
 
 Errore riscontrato:
 ```python
@@ -65,17 +65,17 @@ Cosa dovevi scrivere:
 email += "esempio"
 ```
 
-Nota: La logica è corretta, è solo un errore di digitazione, ma l'output non corrisponde a quello atteso.
+Nota: La logica del codice è perfettamente corretta (uso corretto dell'operatore +=), è SOLO un errore di digitazione/battitura. Secondo i criteri di valutazione, gli errori di pura battitura che non compromettono la logica sono penalizzati con -1 punto.
 
 ---
 
 ## Esercizio 6
-Punteggio: 3/5
+Punteggio: 4/5
 
 Obiettivo: Riepilogo operatore += - costruire una frase
 
 Analisi del codice:
-Hai completato l'esercizio correttamente nella struttura, ma c'è un errore di battitura.
+Hai completato l'esercizio con la logica corretta, ma c'è un errore di battitura nell'output.
 
 Errore riscontrato:
 ```python
@@ -90,7 +90,7 @@ Cosa dovevi scrivere:
 frase += " un linguaggio"
 ```
 
-Nota: Fai attenzione agli errori di battitura, anche se la logica del codice è corretta.
+Nota: La logica del codice è perfettamente corretta (uso corretto dell'operatore += per costruire progressivamente la frase), è SOLO un errore di digitazione/battitura. Secondo i criteri di valutazione, gli errori di pura battitura che non compromettono la logica sono penalizzati con -1 punto.
 
 ---
 
@@ -431,11 +431,12 @@ Punti di forza:
 
 Aree da migliorare URGENTEMENTE:
 
-1. **Attenzione agli errori di battitura (NON CRITICO ma da migliorare):**
-   - Es05: "esmpio" invece di "esempio"
-   - Es06: "liguaggio" invece di "linguaggio"
-   - Es18: "farse" invece di "frase"
-   - Rileggi sempre il codice prima di consegnarlo
+1. **Attenzione agli errori di battitura (MINORE - penalità -1 punto):**
+   - Es05: "esmpio" invece di "esempio" → 4/5
+   - Es06: "liguaggio" invece di "linguaggio" → 4/5
+   - Es18: "farse" invece di "frase" → 4/5
+   - Questi sono errori minori che non compromettono la logica del codice
+   - Suggerimento: rileggi sempre il codice prima di consegnarlo
 
 2. **Formattazione dell'output (IMPORTANTE):**
    - Es09: Output manca "Nome:" e "Cognome:" all'inizio
@@ -477,4 +478,11 @@ if (testo.startswith("a") or testo.startswith("b")) and (testo.endswith("x") or 
 ```
 
 Valutazione generale:
-Hai dimostrato una buona comprensione dei concetti base delle stringhe in Python. I tuoi punti di forza sono nella concatenazione, nell'uso di len(), upper(), lower() e nella logica condizionale semplice. Hai anche dimostrato di saper combinare strip() e lower() correttamente (es16). Gli errori principali sono tre: 1) disattenzione negli errori di battitura (es05, es06, es18), 2) non usare le variabili trasformate nei passaggi successivi (es15), e 3) sintassi errata delle condizioni OR con metodi di stringa (es19, es20). Quest'ultimo è un errore concettuale comune ma importante da correggere. Correggendo questi tre aspetti e facendo più attenzione alla formattazione dell'output, puoi facilmente raggiungere l'eccellenza.
+Hai dimostrato una buona comprensione dei concetti base delle stringhe in Python. I tuoi punti di forza sono nella concatenazione, nell'uso di len(), upper(), lower() e nella logica condizionale semplice. Hai anche dimostrato di saper combinare strip() e lower() correttamente (es16).
+
+Gli errori si dividono in tre categorie:
+1. **Errori minori (battitura)**: es05, es06, es18 - penalizzati solo con -1 punto perché non compromettono la logica
+2. **Errori significativi (formato)**: es09, es10 - output non corrisponde al formato richiesto
+3. **Errori gravi (logica)**: es15 (variabile sbagliata), es19-20 (sintassi OR errata)
+
+Il problema più grave è la sintassi errata delle condizioni OR con metodi di stringa (es19, es20), che è un errore concettuale comune ma importante da correggere. Anche l'errore nell'es15 (usare la variabile originale invece di quella trasformata) è un concetto fondamentale. Correggendo questi errori logici, puoi facilmente raggiungere un punteggio superiore a 85/100.
