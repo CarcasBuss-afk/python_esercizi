@@ -1,0 +1,25 @@
+# Riepilogo operatore in e .count()
+
+""" SCOPO: Chiedi all'utente di inserire una frase.
+Converti la frase in minuscolo.
+Conta quante volte appare la lettera 'a' nella frase.
+Stampa "La lettera 'a' appare [numero] volte".
+Se appare più di 3 volte stampa "Ci sono molte 'a'!", altrimenti "Ci sono poche 'a'". """
+
+""" Output atteso (esempi):
+Inserisci una frase: La casa ha tante stanze
+La lettera 'a' appare 6 volte
+Ci sono molte 'a'!
+
+Inserisci una frase: Ciao mondo
+La lettera 'a' appare 1 volte
+Ci sono poche 'a'
+"""
+frase = input("Inserisci una farse: ")
+frase_minuscola = frase.lower()
+count = frase_minuscola.count("a")
+print(f"la lettera 'a' appare {count} volte ")
+if count > 3:
+    print("Ci sono molte 'a'")
+else:
+    print("Ci sono poche 'a'")

@@ -143,7 +143,7 @@ Questa sezione documenta il processo e i criteri per correggere le verifiche deg
 
 **Filosofia**: La correzione deve essere formativa, non punitiva. L'obiettivo è aiutare lo studente a capire gli errori e migliorare.
 
-**Punteggio**: 5 punti per esercizio (totale 100 punti per 20 esercizi)
+**Punteggio**: 5 punti per esercizio (totale 100 punti per 20 esercizi). Si usano anche punteggi decimali (es. 4.5, 3.5) per una valutazione più precisa.
 
 **Approccio**: Flessibile sulla forma, rigoroso sulla funzionalità
 
@@ -219,23 +219,68 @@ Per ogni esercizio:
    - Errori concettuali (return vs print, parametri)
 
 3. **Assegna punteggio**:
-   - 5/5: Completamente corretto (anche con variazioni di stile)
-   - 4/5: SOLO errori di battitura/typo che non compromettono la logica (es. "esmpio" invece di "esempio", "liguaggio" invece di "linguaggio")
-   - 3/5: Errore significativo di formato/output o logica parzialmente errata
-   - 2/5: Errore grave nella logica, funziona parzialmente
-   - 1/5: Errore molto grave, quasi non funziona
-   - 0/5: Non svolto o completamente errato
 
-   **IMPORTANTE - Distinzione tra errori di battitura e errori logici**:
-   - **Errore di battitura (4/5)**: Errore ortografico in una stringa che produce output diverso da quello atteso, MA la logica del codice è corretta
-     - Esempio: `email += "esmpio"` invece di `email += "esempio"` → produce "mario@esmpio.com" invece di "mario@esempio.com"
-     - Penalità: -1 punto
-   - **Errore di formato/output (3/5)**: Output manca parti richieste o ha formato completamente diverso
-     - Esempio: manca "Nome:" all'inizio della riga quando richiesto
+   **NUOVA REGOLA - Penalità graduali:**
+   Ogni errore di battitura o di composizione dell'output vale **-0.5 punti** (non più -1 o -2 punti interi). Questo rende la valutazione più equa e proporzionale.
+
+   **Scala di valutazione:**
+   - **5/5**: Completamente corretto (anche con variazioni di stile accettabili)
+
+   - **4.5/5**: Un singolo errore di battitura o di composizione output minore
+     - Esempio: "esmpio" invece di "esempio", spazio mancante, maiuscola sbagliata
+     - Penalità: -0.5 punti
+
+   - **4/5**: Due errori di battitura o di composizione output
+     - Esempio: due typo, oppure un typo + una maiuscola sbagliata
+     - Penalità: -1 punto (2 × 0.5)
+
+   - **3.5/5**: Tre errori di battitura/composizione OPPURE un errore di formato minore
+     - Esempio: tre typo, oppure manca uno spazio dopo ":" in più punti
+     - Penalità: -1.5 punti
+
+   - **3/5**: Quattro o più errori di battitura/composizione OPPURE errore significativo di formato
+     - Esempio: manca completamente un'etichetta richiesta ("Nome:"), oppure formato molto diverso
      - Penalità: -2 punti
-   - **Errore logico (2/5 o 0/5)**: La logica del codice è errata, non solo l'output
-     - Esempio: usa variabile sbagliata, condizioni if/else errate
-     - Penalità: -3 punti o 0 punti se completamente errato
+
+   - **2.5/5**: Logica corretta ma output impreciso con multipli errori di formato
+     - Penalità: -2.5 punti
+
+   - **2/5**: Logica corretta MA output significativamente diverso o parzialmente sbagliato
+     - Esempio: usa `len()` correttamente ma l'output è molto diverso da quello richiesto
+     - **FILOSOFIA**: Premiare lo sforzo quando la logica funziona, anche se l'output non è perfetto
+     - Penalità: -3 punti
+
+   - **1/5**: Errore molto grave nella logica, quasi non funziona
+     - Penalità: -4 punti
+
+   - **0/5**: Non svolto o completamente errato (nessuna logica corretta)
+     - Penalità: 5 punti (tutto)
+
+   **IMPORTANTE - Come contare gli errori:**
+
+   - **Errore di battitura/typo (-0.5 ciascuno)**:
+     - Errore ortografico in una stringa: "esmpio" invece di "esempio"
+     - Maiuscola/minuscola sbagliata: "Nome" invece di "nome"
+     - Spazio mancante o extra: "Nome:" invece di "Nome: "
+     - Punteggiatura sbagliata: "Nome;" invece di "Nome:"
+     - **LA LOGICA DEL CODICE È CORRETTA**
+
+   - **Errore di formato significativo (-2 punti o più)**:
+     - Manca completamente un'etichetta richiesta ("Nome:" non presente)
+     - Ordine completamente sbagliato
+     - Formato strutturalmente diverso da quello richiesto
+
+   - **Logica corretta ma output impreciso (-2 o -3 punti)**:
+     - Il codice usa i concetti giusti (funzioni giuste, operazioni corrette)
+     - MA l'output finale è diverso da quello richiesto
+     - **Importante**: Si premia lo sforzo e la comprensione dei concetti
+
+   - **Errore logico grave (0 punti)**:
+     - Usa variabile completamente sbagliata
+     - Usa operatore sbagliato che stravolge la logica (`>` invece di `in`)
+     - Usa metodo sbagliato che non fa quello che dovrebbe
+     - Manca `return` quando è obbligatorio (e usa `print` invece)
+     - Nessuna comprensione del concetto richiesto
 
 #### Fase 3: Documentazione nel File MD
 
