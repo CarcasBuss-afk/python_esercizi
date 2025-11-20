@@ -1,82 +1,36 @@
 # COMPLETA IL CODICE DOVE TROVI ________ !
-# QUANDO CI SONO I COMMENTI IN MAIUSCOLO SIGNIFICA CHE DEVI SCRIVERE TU
-# IL CODICE IN BASE A QUANTO RICHIESTO NEL COMMENTO
 
 """
-SCOPO del programma:
-Usare SELECT con WHERE per filtrare i risultati.
-Ad esempio: trovare solo i videogiochi economici o di un certo anno.
+SCOPO: Usare LIKE e % per ricerca parziale.
+Ora "Mine" troverà "Minecraft"!
 """
 
 import mysql.connector
+from mysql.connector import Error
 
-print("=== RICERCA VIDEOGIOCHI CON FILTRI ===\n")
+def connessione(host_, user_, password_, database_):
+    try:
+        conn = mysql.connector.connect(host=host_, user=user_, password=password_, database=database_)
+        return conn
+    except Error as e:
+        return None
 
-# Connessione
-connessione = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='',
-    database='videogame_db'
-)
+def elenco(ricerca_=""):
+    conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
+    if conn == None:
+        return []
 
-cursore = connessione.cursor()
+    cursore = conn.cursor()
+    query = "SELECT * FROM videogiochi WHERE titolo ________ %s"  # COMPLETA: LIKE
+    cursore.execute(query, (f"{ricerca_}________",))              # COMPLETA: %
 
-# --- FILTRO 1: Videogiochi economici (prezzo <= 30 euro) ---
-print("Videogiochi economici (massimo 30€):\n")
+    risultati = cursore.________()                                # COMPLETA: fetchall
+    cursore.close()
+    conn.________()                                               # COMPLETA: close
+    return ________                                               # COMPLETA: risultati
 
-query1 = "SELECT titolo, prezzo FROM videogiochi WHERE prezzo <= ________"
-cursore.execute(________)
-
-risultati = cursore.fetchall()
-
-for gioco in risultati:
-    print(f"- {gioco[0]}: €{gioco[1]}")
-
-# --- FILTRO 2: Videogiochi recenti (dal 2020 in poi) ---
-print("\nVideogiochi usciti dal 2020 in poi:\n")
-
-query2 = "SELECT ________, ________ FROM videogiochi WHERE anno_uscita >= %s"
-#        (seleziona titolo  e  anno_uscita)
-
-cursore.execute(query2, (________,))  # Passa 2020 come parametro
-
-risultati = cursore.fetchall()
-
-for gioco in risultati:
-    print(f"- {________} ({________})")
-    #      titolo      anno
-
-# --- FILTRO 3: Videogiochi di un genere specifico ---
-genere_cercato = input("\nCerca videogiochi per genere (es. RPG, Azione): ")
-
-query3 = "SELECT titolo, sviluppatore FROM videogiochi WHERE genere = %s"
-cursore.execute(________, (________,))
-
-risultati = cursore.fetchall()
-
-if len(risultati) > 0:
-    print(f"\nVideogiochi di genere '{genere_cercato}':")
-    for gioco in risultati:
-        print(f"- {gioco[0]} by {gioco[1]}")
-else:
-    print(f"\nNessun videogioco trovato per il genere '{genere_cercato}'")
-
-# Chiusura
-cursore.close()
-connessione.close()
-
-"""
-COSA ABBIAMO IMPARATO:
-1. WHERE filtra i risultati in base a condizioni
-2. Operatori: =, <=, >=, <, >, !=
-3. Possiamo selezionare solo alcune colonne (non per forza *)
-4. Usare %s anche nei WHERE per sicurezza
-5. if len(risultati) > 0 controlla se ci sono risultati
-
-OPERATORI WHERE:
-- WHERE prezzo <= 30
-- WHERE anno_uscita >= 2020
-- WHERE genere = 'RPG'
-- WHERE titolo LIKE '%Mario%' (contiene "Mario")
-"""
+ricerca = input("Cerca videogioco: ")
+giochi = elenco(ricerca)
+print(f"Trovati: {len(giochi)}")
+for gioco in giochi:
+    print(f"- {gioco[1]}")

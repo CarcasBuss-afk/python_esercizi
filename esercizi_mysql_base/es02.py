@@ -4,52 +4,48 @@
 
 """
 SCOPO del programma:
-Usare VARIABILI per i parametri di connessione.
-Questo rende il codice piu pulito e riutilizzabile!
+Creare una FUNZIONE per la connessione che possiamo riutilizzare.
+Le funzioni rendono il codice più organizzato!
 """
 
 import mysql.connector
+from mysql.connector import Error
 
-print("=== CONNESSIONE CON VARIABILI ===\n")
+# Funzione che crea la connessione e la restituisce
+def connessione(host_, user_, password_, database_):
+    try:
+        conn = mysql.connector.connect(
+            host = ________,          # COMPLETA: usa il parametro host_
+            user = ________,          # COMPLETA: usa il parametro user_
+            password = ________,      # COMPLETA: usa il parametro password_
+            database = ________       # COMPLETA: usa il parametro database_
+        )
+        return conn                   # Restituisce la connessione se ok
+    except Error as e:
+        print(f"Errore: {e.errno}")
+        return ________               # COMPLETA: cosa restituire se errore? (None)
 
-# Invece di scrivere i parametri direttamente nella funzione connect(),
-# e meglio salvarli in variabili separate
+print("=== FUNZIONE CONNESSIONE ===\n")
 
-# COMPLETA le variabili con i tuoi dati
-db_host = '________'        # localhost
-db_user = '________'        # il tuo username
-db_password = '________'    # la tua password
-db_database = '________'    # videogame_db
+# Usiamo la funzione
+conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
 
-# Ora usiamo le variabili nella connessione
-# Nota come usiamo i nomi dei parametri (host=, user=, ecc.)
-connessione = mysql.connector.connect(
-    host=________,
-    user=________,
-    password=________,
-    database=________
-)
-
-print("Connessione riuscita!")
-
-# Possiamo vedere alcune informazioni sulla connessione
-print(f"Server: {________}")
-print(f"Database: {connessione.database}")
-print(f"User: {________}")
-
-# CHIUDI LA CONNESSIONE
-________
-
-print("\nConnessione chiusa.")
+# Controlliamo se ha funzionato
+if conn == ________:                  # COMPLETA: controlla se è None
+    print("Connessione fallita!")
+else:
+    print("✓ Connessione riuscita!")
+    print(f"Database: {________}")   # COMPLETA: stampa conn.database
+    conn.close()
 
 """
-COSA ABBIAMO IMPARATO:
-1. Usare variabili per i parametri rende il codice piu leggibile
-2. Possiamo accedere a informazioni della connessione (database, ecc.)
-3. I parametri si passano con nome (host=, user=, ecc.)
+COSA HAI IMPARATO:
+- def nome_funzione(parametri): crea una funzione
+- return restituisce un valore
+- return None se c'è errore
+- Controllare if conn == None prima di usarla
 
-VANTAGGI delle variabili:
-- Piu facile modificare i parametri
-- Codice piu chiaro e organizzato
-- Preparazione per file di configurazione separati
+VANTAGGI:
+Ora possiamo chiamare connessione() ogni volta che serve,
+invece di riscrivere tutto il codice!
 """

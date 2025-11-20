@@ -1,81 +1,37 @@
 # COMPLETA IL CODICE DOVE TROVI ________ !
-# QUANDO CI SONO I COMMENTI IN MAIUSCOLO SIGNIFICA CHE DEVI SCRIVERE TU
-# IL CODICE IN BASE A QUANTO RICHIESTO NEL COMMENTO
 
 """
-SCOPO del programma:
-Eliminare MULTIPLI record che soddisfano una condizione.
-Esempio: rimuovere tutti i videogiochi gratuiti (prezzo = 0).
+SCOPO: Creare funzione cancella(id) con conferma.
 """
 
 import mysql.connector
+from mysql.connector import Error
 
-print("=== RIMUOVI VIDEOGIOCHI GRATUITI ===\n")
+def connessione(host_, user_, password_, database_):
+    try:
+        conn = mysql.connector.connect(host=host_, user=user_, password=password_, database=database_)
+        return conn
+    except Error as e:
+        return None
 
-# Connessione
-connessione = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='',
-    database='videogame_db'
-)
+def cancella(id):
+    conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
+    if conn == None:
+        return
+    
+    cursore = conn.cursor()
+    query = "DELETE FROM videogiochi WHERE ________ = %s"   # COMPLETA: id
+    cursore.________(query, (________,))                    # COMPLETA: execute, id
+    
+    conn.________()                                         # COMPLETA: commit
+    cursore.close()
+    conn.________()                                         # COMPLETA: close
 
-cursore = connessione.cursor()
+id_del = int(input("ID da eliminare: "))
+conferma = input(f"Sei sicuro di eliminare ID {id_del}? (s/n): ").________.________()
 
-# Prima vediamo quali videogiochi sono gratuiti
-print("Videogiochi gratuiti nel database:")
-cursore.execute("SELECT titolo, sviluppatore, prezzo FROM videogiochi WHERE prezzo = 0")
-giochi_gratuiti = cursore.fetchall()
-
-if len(giochi_gratuiti) == 0:
-    print("Nessun videogioco gratuito trovato.")
+if conferma == "s":
+    cancella(________)                                      # COMPLETA: id_del
+    print("Eliminato!")
 else:
-    for gioco in giochi_gratuiti:
-        print(f"- {gioco[0]} by {gioco[1]} (€{gioco[2]})")
-
-    print(f"\nTotale: {len(giochi_gratuiti)} videogiochi")
-
-    conferma = input("\nVuoi eliminare tutti i videogiochi gratuiti? (si/no): ")
-
-    if conferma.lower() == 'si':
-        # Eliminiamo tutti i videogiochi con prezzo = 0
-        query = "DELETE FROM videogiochi WHERE ________ = ________"
-        #                                     prezzo     0
-
-        cursore.execute(________)
-        ________.commit()
-
-        print(f"\nEliminati {cursore.rowcount} videogiochi gratuiti.")
-
-        # Verifichiamo
-        print("\nVideogiochi rimanenti:")
-        cursore.execute("SELECT titolo, prezzo FROM videogiochi")
-        rimanenti = cursore.fetchall()
-
-        for gioco in rimanenti:
-            print(f"- {gioco[0]}: €{gioco[1]}")
-    else:
-        print("\nOperazione annullata.")
-
-# Chiusura
-cursore.close()
-connessione.close()
-
-"""
-COSA ABBIAMO IMPARATO:
-1. DELETE puo eliminare multipli record con WHERE
-2. Mostrare sempre un'anteprima di cosa verra eliminato
-3. Chiedere conferma e fondamentale
-4. rowcount ci dice quanti record sono stati eliminati
-5. Verificare il risultato dopo l'operazione
-
-ESEMPI DI DELETE CON CONDIZIONI:
-- DELETE FROM videogiochi WHERE prezzo = 0
-- DELETE FROM videogiochi WHERE anno_uscita < 2010
-- DELETE FROM videogiochi WHERE genere = 'Sport'
-- DELETE FROM videogiochi WHERE sviluppatore = 'Nintendo'
-
-ATTENZIONE:
-Queste operazioni sono PERMANENTI!
-Non esiste "annulla" nel database.
-"""
+    print("Annullato")

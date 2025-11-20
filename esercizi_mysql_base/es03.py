@@ -4,57 +4,52 @@
 
 """
 SCOPO del programma:
-Esercizio di RIEPILOGO - Connessione completa con verifica.
-Scrivi tu tutto il codice per connetterti al database e verificare
-che la tabella videogiochi esista!
+RIEPILOGO - Creare da zero la funzione connessione() completa.
+Questa funzione sarà la base di tutti i prossimi esercizi!
 """
 
-# IMPORTA LA LIBRERIA NECESSARIA
+# IMPORTA LE LIBRERIE NECESSARIE
+# (mysql.connector e Error)
 
 
-print("=== VERIFICA CONNESSIONE E TABELLA ===\n")
+print("=== RIEPILOGO: FUNZIONE CONNESSIONE ===\n")
 
-# CREA LE VARIABILI PER I PARAMETRI DI CONNESSIONE
-# (host, user, password, database)
-
-
-# CREA LA CONNESSIONE AL DATABASE
-
-
-print("Connessione riuscita al database videogame_db!")
-
-# Ora verifichiamo che la tabella 'videogiochi' esista
-# Per farlo usiamo un CURSORE (lo vedremo meglio nei prossimi esercizi)
-cursore = connessione.cursor()
-
-# Questa query mostra tutte le tabelle nel database
-cursore.execute("SHOW TABLES")
-
-# Prendiamo i risultati
-tabelle = cursore.fetchall()
-
-print("\nTabelle presenti nel database:")
-for tabella in tabelle:
-    print(f"- {tabella[0]}")
-
-# CHIUDI IL CURSORE
+# CREA LA FUNZIONE connessione(host_, user_, password_, database_)
+# La funzione deve:
+# 1. Usare try/except per gestire errori
+# 2. Creare la connessione con i 4 parametri
+# 3. Restituire conn se tutto ok
+# 4. Restituire None se c'è errore
+# 5. Stampare il codice errore (e.errno) in caso di errore
 
 
-# CHIUDI LA CONNESSIONE
+# TEST della funzione
+print("Test 1: Connessione valida")
+conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
 
+if conn == None:
+    print("✗ Test fallito\n")
+else:
+    print("✓ Test superato!")
+    print(f"Database: {conn.database}\n")
+    conn.close()
 
-print("\nVerifica completata! Tutto pronto per gli esercizi successivi.")
+print("Test 2: Password errata")
+conn_errata = connessione("localhost", "root", "password_sbagliata", "videogame_db")
+
+if conn_errata == None:
+    print("✓ Errore gestito correttamente\n")
+else:
+    print("✗ Doveva dare errore\n")
+    conn_errata.close()
 
 """
-COSA ABBIAMO IMPARATO:
-1. Come connettersi al database
-2. Come usare un cursore per eseguire query
-3. Come verificare l'esistenza di tabelle
-4. Sempre chiudere cursore E connessione
+RIEPILOGO:
+Hai creato la funzione connessione() che:
+- Accetta 4 parametri
+- Gestisce errori con try/except
+- Restituisce conn o None
 
-PROSSIMI PASSI:
-- Nei prossimi esercizi impareremo a inserire dati (INSERT)
-- Poi a leggerli (SELECT)
-- Modificarli (UPDATE)
-- Ed eliminarli (DELETE)
+QUESTA FUNZIONE È FONDAMENTALE:
+La useremo in TUTTI i prossimi esercizi!
 """

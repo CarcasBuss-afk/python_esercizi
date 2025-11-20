@@ -4,59 +4,52 @@
 
 """
 SCOPO del programma:
-Inserire MULTIPLI videogiochi contemporaneamente usando executemany().
-Questo e piu efficiente che fare tanti INSERT separati!
+Creare la funzione elenco_tutti() che restituisce tutti i videogiochi.
+Questo rende il codice riutilizzabile!
 """
 
 import mysql.connector
+from mysql.connector import Error
 
-print("=== INSERIMENTO MULTIPLO ===\n")
+def connessione(host_, user_, password_, database_):
+    try:
+        conn = mysql.connector.connect(host = host_, user = user_, password = password_, database = database_)
+        return conn
+    except Error as e:
+        print(f"Errore: {e.errno}")
+        return None
 
-# Connessione
-connessione = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='',
-    database='videogame_db'
-)
+def elenco_tutti():
+    """Restituisce tutti i videogiochi dal database"""
+    conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
 
-cursore = connessione.cursor()
+    if conn == None:
+        return []                     # Lista vuota se errore
 
-# Query di inserimento (uguale a prima)
-query = "INSERT INTO videogiochi (titolo, sviluppatore, anno_uscita, prezzo, genere) VALUES (%s, %s, %s, %s, %s)"
+    cursore = conn.________()         # COMPLETA: crea cursore
 
-# LISTA di videogiochi da inserire
-# Ogni elemento della lista e una tupla con i 5 valori
-lista_videogiochi = [
-    ('Hollow Knight', 'Team Cherry', 2017, 14.99, 'Metroidvania'),
-    ('Celeste', 'Maddy Makes Games', 2018, 19.99, 'Platform'),
-    ('Hades', '________', ________, ________, '________')
-    # Completa con: Supergiant Games, 2020, 24.99, Roguelike
-]
+    query = "________"                # COMPLETA: SELECT * FROM videogiochi
+    cursore.execute(query)
 
-# executemany() inserisce tutti i record in una volta!
-cursore.executemany(________, ________)
+    risultati = cursore.________()    # COMPLETA: prendi tutti i risultati
 
-# Commit per salvare
-________.commit()
+    cursore.________()                # COMPLETA: chiudi cursore
+    conn.________()                   # COMPLETA: chiudi connessione
 
-print(f"Inseriti {________} videogiochi!")
+    return ________                   # COMPLETA: restituisci risultati
 
-# Chiusura
-cursore.close()
-connessione.close()
+print("=== FUNZIONE ELENCO_TUTTI() ===\n")
 
-print("Inserimento multiplo completato!")
+giochi = elenco_tutti()
+print(f"Trovati {len(giochi)} videogiochi:\n")
+
+for gioco in giochi:
+    print(f"{gioco[1]} ({gioco[3]}) - €{gioco[4]}")
 
 """
-COSA ABBIAMO IMPARATO:
-1. executemany() inserisce multipli record contemporaneamente
-2. Serve una lista di tuple, una per ogni record
-3. Molto piu efficiente di tanti execute() separati
-4. rowcount ci dice quanti record sono stati inseriti
-
-QUANDO USARE executemany():
-- Quando hai molti dati da inserire
-- Quando importi dati da file (CSV, Excel, ecc.)
-- Per ottimizzare le performance
+COSA HAI IMPARATO:
+- Creare funzioni che restituiscono dati
+- return [] per lista vuota
+- return risultati per restituire dati
+- La funzione gestisce tutto: connessione, query, chiusura
 """

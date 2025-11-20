@@ -4,49 +4,49 @@
 
 """
 SCOPO del programma:
-Imparare a connettersi a un database MySQL usando Python.
-Questo e il primo passo fondamentale per lavorare con i database!
+Imparare a connettersi al database MySQL e gestire gli errori con try/except.
+Questo è il primo passo per lavorare con database in Python!
 """
 
-# Prima di tutto, importiamo la libreria mysql.connector
-# Questa libreria ci permette di comunicare con MySQL
+# Importiamo le librerie necessarie
 import mysql.connector
+from mysql.connector import Error
 
-print("=== CONNESSIONE AL DATABASE MYSQL ===\n")
+print("=== CONNESSIONE AL DATABASE ===\n")
 
-# STEP 1: Creare la connessione al database
-# La funzione connect() richiede 4 parametri:
-# - host: dove si trova il server MySQL (di solito localhost)
-# - user: il nome utente MySQL
-# - password: la password (puo essere vuota)
-# - database: il nome del database a cui connettersi
+# try = prova a eseguire questo codice
+# except = se c'è un errore, fai quest'altro
 
-connessione = mysql.connector.connect(
-    host='localhost',           # Di solito e 'localhost'
-    user='root',           # Il tuo username MySQL (es. 'root')
-    password='docentepc',       # La tua password ('' se vuota)
-    database='videogame_db'    # Il nome del nostro database
-)
+try:
+    # Creiamo la connessione al database
+    conn = mysql.connector.connect(
+        host = 'localhost',
+        user = 'root',              # Modifica con il tuo username
+        password = '________',      # COMPLETA: la tua password MySQL
+        database = 'videogame_db'
+    )
 
-# STEP 2: Verificare che la connessione sia avvenuta
-# Se arriviamo qui senza errori, la connessione e riuscita!
-print("Connessione al database riuscita!")
-print(f"Connesso al database: {connessione.database}")
+    print("✓ Connessione riuscita!")
+    print(f"Database: {conn.database}")
 
-# STEP 3: IMPORTANTE! Chiudere sempre la connessione quando abbiamo finito
-# Questo libera risorse e previene problemi
-conn.close()
+    # Chiudiamo la connessione
+    conn.________()                 # COMPLETA: chiudi la connessione
+    print("✓ Connessione chiusa")
 
-print("\nConnessione chiusa correttamente.")
+except Error as e:
+    # Se c'è un errore, lo stampiamo
+    print("✗ Errore di connessione!")
+    print(f"Codice errore: {e.errno}")
+    print(f"Messaggio: {e}")
 
 """
-COSA ABBIAMO IMPARATO:
-1. Per usare MySQL in Python serve la libreria mysql.connector
-2. La funzione connect() crea la connessione al database
-3. Servono 4 parametri: host, user, password, database
-4. SEMPRE chiudere la connessione con .close()
+COSA HAI IMPARATO:
+- import mysql.connector per connettersi a MySQL
+- from mysql.connector import Error per gestire errori
+- try/except previene crash del programma
+- conn.close() chiude sempre la connessione
 
-PROVA AD ESEGUIRE:
-- Se vedi "Connessione riuscita" tutto funziona!
-- Se vedi errori, controlla username, password e che MySQL sia avviato
+PROVA:
+- Esegui con credenziali corrette (dovrebbe funzionare)
+- Prova con password sbagliata (dovresti vedere l'errore gestito)
 """

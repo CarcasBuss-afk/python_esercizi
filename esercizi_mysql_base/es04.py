@@ -4,60 +4,57 @@
 
 """
 SCOPO del programma:
-Imparare a INSERIRE un nuovo videogioco nel database.
-Usiamo il comando SQL INSERT INTO.
+Imparare a usare SELECT per leggere dati dal database.
+Usiamo cursore e fetchall() per ottenere tutti i risultati.
 """
 
 import mysql.connector
+from mysql.connector import Error
 
-print("=== INSERIMENTO NUOVO VIDEOGIOCO ===\n")
+def connessione(host_, user_, password_, database_):
+    try:
+        conn = mysql.connector.connect(
+            host = host_,
+            user = user_,
+            password = password_,
+            database = database_
+        )
+        return conn
+    except Error as e:
+        print(f"Errore: {e.errno}")
+        return None
 
-# Connessione al database
-connessione = mysql.connector.connect(
-    host='localhost',
-    user='root',           # Modifica se necessario
-    password='',           # Modifica se necessario
-    database='videogame_db'
-)
+print("=== SELECT - LEGGI TUTTI I VIDEOGIOCHI ===\n")
 
-# Creiamo un cursore per eseguire le query
-cursore = connessione.cursor()
+conn = connessione("localhost", "root", "la_tua_password", "videogame_db")
 
-# Query SQL per inserire un nuovo videogioco
-# Nota: usiamo %s come segnaposto per i valori (per sicurezza!)
-query = "INSERT INTO videogiochi (titolo, sviluppatore, anno_uscita, prezzo, genere) VALUES (%s, %s, %s, %s, %s)"
+if conn == None:
+    print("Connessione fallita!")
+else:
+    # Il cursore serve per eseguire query
+    cursore = conn.cursor()
 
-# I valori da inserire (in ordine!)
-# Inseriamo "The Witcher 3" come esempio
-valori = ('The Witcher 3', '________', ________, ________, '________')
-#         titolo             sviluppatore  anno     prezzo    genere
-#                           (CD Projekt)  (2015)   (39.99)   (RPG)
+    # Query SQL per selezionare tutto
+    query = "SELECT * FROM videogiochi"
+    cursore.________(query)           # COMPLETA: esegui la query
 
-# Eseguiamo la query
-cursore.execute(________, ________)
+    # fetchall() prende tutti i risultati
+    risultati = cursore.________()    # COMPLETA: prendi tutti i risultati
 
-# IMPORTANTE! Dopo INSERT/UPDATE/DELETE dobbiamo fare COMMIT
-# Il commit salva definitivamente le modifiche nel database
-________.commit()
+    print(f"Trovati {len(risultati)} videogiochi:\n")
 
-print(f"Videogioco inserito con successo!")
-print(f"Righe inserite: {cursore.rowcount}")
+    # Ogni risultato è una tupla (id, titolo, sviluppatore, anno, prezzo, genere)
+    for gioco in risultati:
+        print(f"ID {gioco[0]}: {gioco[1]} - {gioco[2]} ({gioco[3]}) - €{gioco[4]}")
 
-# Chiudiamo cursore e connessione
-cursore.close()
-connessione.close()
-
-print("\nDatabase aggiornato!")
+    cursore.close()
+    conn.________()                   # COMPLETA: chiudi connessione
 
 """
-COSA ABBIAMO IMPARATO:
-1. INSERT INTO serve per aggiungere nuovi record
-2. Usiamo %s come segnaposto per i valori (previene SQL injection!)
-3. I valori si passano come tupla a execute()
-4. SEMPRE fare commit() dopo INSERT/UPDATE/DELETE
-5. rowcount ci dice quante righe sono state modificate
-
-NOTA DI SICUREZZA:
-NON scrivere mai: f"INSERT ... VALUES ('{valore}')"
-Usare SEMPRE %s e passare i valori separatamente!
+COSA HAI IMPARATO:
+- conn.cursor() crea un cursore
+- cursore.execute(query) esegue la query
+- cursore.fetchall() prende tutti i risultati
+- Ogni risultato è una tupla con i campi
+- SEMPRE chiudere cursore e connessione
 """

@@ -4,60 +4,46 @@
 
 """
 SCOPO del programma:
-RIEPILOGO INSERT - Inserire un videogioco chiedendo i dati all'utente.
-Questo e un'applicazione pratica e interattiva!
+RIEPILOGO - Creare da zero la funzione elenco_tutti().
+Restituisce tutti i videogiochi dal database.
 """
 
-import mysql.connector
-
-print("=== AGGIUNGI UN NUOVO VIDEOGIOCO ===\n")
-
-# CHIEDI ALL'UTENTE I DATI DEL VIDEOGIOCO
-titolo = input("Titolo del videogioco: ")
-sviluppatore = input("Sviluppatore: ")
-anno = int(input("Anno di uscita: "))
-prezzo = float(input("Prezzo (€): "))
-genere = input("Genere: ")
-
-print(f"\nStai per inserire: {titolo} ({anno})")
-
-# CREA LA CONNESSIONE AL DATABASE
+# IMPORTA LE LIBRERIE
 
 
-# CREA IL CURSORE
+# CREA LA FUNZIONE connessione() (uguale a es03)
 
 
-# CREA LA QUERY INSERT (usa %s per i segnaposto!)
+# CREA LA FUNZIONE elenco_tutti()
+# La funzione deve:
+# 1. Connettersi al database
+# 2. Controllare if conn == None (restituire [])
+# 3. Creare cursore
+# 4. Eseguire SELECT * FROM videogiochi
+# 5. Prendere i risultati con fetchall()
+# 6. Chiudere cursore e connessione
+# 7. Restituire i risultati
 
 
-# CREA LA TUPLA CON I VALORI DELL'UTENTE
+print("=== TEST FUNZIONE ELENCO_TUTTI() ===\n")
 
+# TEST
+giochi = elenco_tutti()
 
-# ESEGUI LA QUERY
-
-
-# FAI IL COMMIT
-
-
-# Messaggio di conferma
-print(f"\n'{titolo}' e stato aggiunto al database!")
-print(f"ID assegnato: {cursore.lastrowid}")  # lastrowid ci da l'ID auto-generato!
-
-# CHIUDI CURSORE E CONNESSIONE
-
-
-
-print("\nOperazione completata!")
+if len(giochi) == 0:
+    print("Nessun videogioco trovato!")
+else:
+    print(f"Trovati {len(giochi)} videogiochi:\n")
+    for gioco in giochi:
+        print(f"ID {gioco[0]}: {gioco[1]} - {gioco[2]}")
+        print(f"  Anno: {gioco[3]} | Prezzo: €{gioco[4]} | Genere: {gioco[5]}\n")
 
 """
-COSA ABBIAMO IMPARATO:
-1. Come prendere input dall'utente per il database
-2. Conversione tipi: int() per anno, float() per prezzo
-3. lastrowid ci da l'ID del record appena inserito
-4. Creazione di un'applicazione interattiva
+RIEPILOGO:
+Hai creato elenco_tutti() che:
+- Gestisce connessione e query
+- Restituisce lista di tuple
+- Gestisce errori (return [])
 
-MIGLIORAMENTI POSSIBILI (per il futuro):
-- Validare l'input (anno valido, prezzo positivo, ecc.)
-- Gestire errori con try/except
-- Chiedere conferma prima di inserire
+PROSSIMO: Aggiungeremo un parametro per cercare!
 """
